@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="zideco" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>ZIDECO-HOME</title>
+
+    <!--O trecho abaixo sera substituido pelo gulp para refletir as versoes minificadas e concatenadas das bibliotecas JS -->
+    <!-- build:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/datejs/build/date.js"></script>
+    <script src="../bower_components/lodash/dist/lodash.js"></script>
+    <script src="../bower_components/restangular/dist/restangular.js"></script>
+    <script src="../bower_components/zepto/zepto.js"></script>
+    <script src="../bower_components/angular-gravatar/build/angular-gravatar.js"></script>
+    <script src="../bower_components/angular-gravatar/build/md5.js"></script>
+    <script src="../bower_components/angular-webstorage/angular-webstorage.js"></script>
+    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+
+    <script src="templates-dummy.js"></script>
+
+    <script src="app.js"></script>
+    <script src="main/main_controller.js"></script>
+    <script src="common/app_directives.js"></script>
+    <script src="common/app_filters.js"></script>
+    <script src="common/app_service.js"></script>
+    <script src="main/ui-states.js"></script>
+    <script src="env/config-desenv.js"></script>
+    <!--<script src="env/config-production.js"></script>-->
+
+    <!--Modulo de Financas-->
+    <script src="modulofinancas/financas_principal.js"></script>
+    <script src="modulofinancas/financas_uistates.js"></script>
+    <script src="modulofinancas/financas_controllers.js"></script>
+
+    <!--Abaixo, temos o arquivo que implementa buscando de arquivos locais.-->
+    <script src="modulofinancas/financas_repo_services_mock.js"></script>
+    <!--Abaixo, temos o arquivo que implementa buscando do banco.-->
+    <!--<script src="modulofinancas/financas_repo_services.js"></script>-->
+
+
+    <!-- endbuild -->
+
+    <!--O trecho abaixo sera substituido pelo gulp para refletir as versoes minificadas e concatenadas das bibliotecas CSS -->
+    <!-- build:css -->
+    <link href="../build/external/bootstrap.css" rel="stylesheet">
+    <link href="../build/app.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+
+</head>
+<body ng-cloak ng-controller="mainCtrl">
+    <!--View principal da tela-->
+    <div ui-view></div>
+
+</body>
+
+ <pre>
+      <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+      $state = {{$state.current.name}}
+      $stateParams = {{$stateParams}}
+      $state full url = {{ $state.$current.url.source }}
+      <!-- $state.$current is not a public api, we are using it to
+           display the full url for learning purposes-->
+    </pre>
+
+</html>

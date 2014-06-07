@@ -1,0 +1,20 @@
+{
+    "lista": [
+        {
+            "palavra":"colaboracao",
+            "contagem":"2"
+        },
+        {
+            "palavra":"transparencia",
+            "contagem":"14"
+        },
+        {
+            "palavra":"precisão",
+            "contagem":"4"
+        },
+        {
+            "palavra":"awesomeness",
+            "contagem":"24"
+        }
+        ]
+}
