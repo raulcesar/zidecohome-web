@@ -1,0 +1,73 @@
+
+
+$background-geral: #6aa84f;
+$background-destaque: #597eaa;
+
+
+$navbar-background: $background-geral;
+$navbar-dropdownmenu-backgroundcolor: #FFFFFF;
+$navbar-dropdownmenu-color: #454545;
+//$navbar-dropdownmenu-backgroundcolor: #454545;
+$navbar-dropdownmenu-width: 300px;
+$navbar-dropdownmenu-height: 400px;
+
+$navbar-dropdownmenu-seta-before-deslocamento-right: 40px;
+$navbar-dropdownmenu-seta-before-deslocamento-top: -20px;
+
+$navbar-dropdownmenu-seta-after-deslocamento-right: 40px;
+$navbar-dropdownmenu-seta-after-deslocamento-top: -19px;
+
+$navbar-barraIdentificadora-height: 40px;
+
+$navbar-barraIdentificadora-width: 100%;
+$navbar-barraIdentificadora-top: 50px;
+$navbar-barraIdentificadora-color: #ffffff;
+$navbar-barraIdentificadora-font: 700 20px 'Bitter';
+$navbar-barraIdentificadora-background: $background-destaque;
+$navbar-barraIdentificadora-text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+
+
+$icon-width:  10px; // ~12px
+$footer-height: 30px;
+$footer-background: $background-geral;
+
+$icon-bar-content-width: 50px;
+$icon-bar-content-height: 50px;
+$icon-bar-image-marginfromcontent: 20;
+
+$icon-kd-image-height: 50px;
+$icon-kd-image-height-hover: 60px;
+
+
+$icon-bar-image-width: $icon-bar-content-width - $icon-bar-image-marginfromcontent;
+$icon-bar-image-height: $icon-bar-content-height - $icon-bar-image-marginfromcontent;
+
+$icon-bar-padding: 10px;
+$icon-bar-fa-fontsize: $icon-bar-content-width - ($icon-bar-padding * 2);
+$icon-bar-fa-fontsize-hover: $icon-bar-fa-fontsize + 10;
+
+
+$hover-delta: 10;
+$icon-bar-image-width-hover: $icon-bar-image-width + $hover-delta;
+$icon-bar-image-height-hover: $icon-bar-image-height + $hover-delta;
+
+
+$icon-module-container-margin-left: 4px;
+$icon-module-container-margin-right: 4px;
+$icon-module-container-margin-top: 2px;
+$icon-module-container-margin-bottom: 2px;
+
+$icon-module-container-width: 80px;
+
+$icon-module-container-height: $icon-bar-content-height;
+
+$icon-module-container-width-hover: $icon-module-container-width + $hover-delta;
+$icon-module-container-height-hover: $icon-module-container-height + $hover-delta;
+
+//$navbar-barraIdentificadora-background: linear-gradient(to bottom, #b5cdff 0%,#003d88 100%);
+//dfdsf
+
+
+//text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+//
+//background-color: #597eaa;

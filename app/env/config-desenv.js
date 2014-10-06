@@ -5,5 +5,4 @@ var config = angular.module('zideco.envconfig', []);
 
 config.constant('CONFIG', {
   RestangularBaseUrl: 'http://localhost:3030/'
-
 });

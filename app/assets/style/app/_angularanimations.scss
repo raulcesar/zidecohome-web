@@ -1,0 +1,17 @@
+.animate-repeat.ng-move,
+.animate-repeat.ng-leave {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move {
+  opacity: 0;
+  max-height: 0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active {
+  opacity: 1;
+  max-height: 40px;
+}
