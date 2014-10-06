@@ -3,31 +3,25 @@
  */
 var zidecoStates = angular.module('zideco.states', []);
 
-zidecoStates.config(['$stateProvider', '$urlRouterProvider',function ($stateProvider, $urlRouterProvider) {
-  'use strict';
+zidecoStates.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    'use strict';
 
-  //Por default, redireciona para o statemain
-  //Por hora, estou configurando um ponto "
+    //Por default, redireciona para o statemain
+    //Por hora, estou configurando um ponto "
 
-  $urlRouterProvider.otherwise('/zideco');
-
-
-  $stateProvider
-    .state('zidecomain', {
-      url: '/zideco',
-      templateUrl: 'main/statemain.html',
-      controller: 'mainCtrl'
-    })
+    $urlRouterProvider.otherwise('/zideco');
 
 
+    $stateProvider
+        .state('zideco', {
+            url: '/zideco',
+            templateUrl: 'main/statemain.html',
+            data: {
+                moduleName: 'ZIDECO'
+            },
+            controller: 'mainCtrl'
+        })
 
 
-
-
-//      .state('statemain.list', {
-//        url: '/list',
-//        templateUrl: 'main/statemain.list.html',
-//        controller: 'mainCtrl'
-//      })
-  ;
+    ;
 }]);
