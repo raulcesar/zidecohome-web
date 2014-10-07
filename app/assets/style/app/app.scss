@@ -1,7 +1,6 @@
 @import "variables";
 @import "navbar";
 @import "misc";
-@import "layoutareaconteudo";
 
 @import "gridcustom";
 @import "forms";
@@ -10,9 +9,22 @@
 @import "raul";
 @import "debugging";
 
-.mainConteudo, .infopanel  {
-  padding-right: 0;
+//Aqui são os paineis EXTERNOS.
+.zero-padding, .mainContent, .panel-module, .panel-info {
+  padding: 0;
 }
+
+//This is the main container of each module (i.e. main div of financemain.html)
+.module-container {
+//  position: absolute;
+//  left: 0;
+  padding: 5px;
+//  height: 999px;
+//  bottom: 0px;
+//  z-index: 9999;
+}
+
+
 
 .moduleinfobar p {
   margin-bottom: $navbar-moduleinfobar-p-margin-bottom;

@@ -86,6 +86,11 @@ gulp.task('VendorCSS', ['CopiaWebFonts'], function () {
 gulp.task('CopiaWebFonts', function () {
     gulp.src('./app/assets/fonts/*.*')
         .pipe(gulp.dest(paths.buildfonts));
+
+    //ui-grid fonts need to be at same level as lib... WEEAAKKK!
+    gulp.src(paths.uigridfonts)
+        .pipe(gulp.dest(paths.uigridbuildfonts));
+
 });
 
 

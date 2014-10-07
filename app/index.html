@@ -7,17 +7,22 @@
 
     <!--O trecho abaixo sera substituido pelo gulp para refletir as versoes minificadas e concatenadas das bibliotecas JS -->
     <!-- build:js -->
+    <script src="../bower_components/ng-file-upload/angular-file-upload-html5-shim.js"></script>
+
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../bower_components/datejs/build/date.js"></script>
     <script src="../bower_components/lodash/dist/lodash.js"></script>
     <script src="../bower_components/restangular/dist/restangular.js"></script>
-    <script src="../bower_components/zepto/zepto.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/angular-gravatar/build/angular-gravatar.js"></script>
     <script src="../bower_components/angular-gravatar/build/md5.js"></script>
     <script src="../bower_components/angular-webstorage/angular-webstorage.js"></script>
-    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+    <script src="../bower_components/ng-file-upload/angular-file-upload.js"></script>
+
+    <!--<script src="../bower_components/angular-translate/angular-translate.js"></script>-->
+    <script src="../bower_components/angular-ui-grid/ui-grid.js"></script>
 
     <script src="templates-dummy.js"></script>
 
@@ -40,6 +45,8 @@
     <!--Abaixo, temos o arquivo que implementa buscando do banco.-->
     <!--<script src="modulofinancas/financas_repo_services.js"></script>-->
 
+    <script src="pocs/poc_principal.js"></script>
+    <script src="pocs/poc_ui_states.js"></script>
 
     <!-- endbuild -->
 
@@ -55,9 +62,9 @@
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
 
 </head>
-<body ng-cloak ng-controller="mainCtrl">
+<body ng-cloak >
 <!--View principal da tela-->
-<div ui-view class="container mainConteudo"></div>
+<div ui-view class="container mainContent"></div>
 
 
 </body>

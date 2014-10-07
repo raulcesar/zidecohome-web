@@ -5,7 +5,7 @@ var zideco = angular.module('zideco',[
   'ui.gravatar',
   'restangular',
   'webStorageModule',
-  'pascalprecht.translate',
+//  'pascalprecht.translate',
 
   'zideco.filters',
   'zideco.states',
@@ -17,7 +17,8 @@ var zideco = angular.module('zideco',[
 
 
   //Modulo principal do FINANCAS
-  'zideco.financas'
+  'zideco.financas',
+  'zideco.pocs'
 
 ]);
 //  [

@@ -34,7 +34,8 @@ var paths = {
 
     vendorcss: [
         './app/assets/style/external/**/*.css',
-        './bower_components/ng-grid/*.css'
+//        './bower_components/ng-grid/*.css'
+        './bower_components/angular-ui-grid/ui-grid.min.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 
@@ -53,7 +54,8 @@ var paths = {
         './bower_components/restangular/dist/restangular.min.js',
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/angular-gravatar/build/*.min.js',
-        './bower_components/ng-grid/build/ng-grid.min.js',
+//        './bower_components/ng-grid/build/ng-grid.min.js',
+        './bower_components/angular-ui-grid/ui-grid.min.js',
         './bower_components/angular-sanitize/angular-sanitize.min.js',
         './bower_components/ng-file-upload/angular-file-upload.min.js',
 
@@ -73,6 +75,16 @@ var paths = {
 };
 
 paths.buildfonts = paths.build + '/assets/fonts';
+
+//The uigrid needs special consideration.
+paths.uigridfonts = [
+    './bower_components/angular-ui-grid/*.eot',
+    './bower_components/angular-ui-grid/*.svg',
+    './bower_components/angular-ui-grid/*.ttf',
+    './bower_components/angular-ui-grid/*.woff'
+];
+paths.uigridbuildfonts = paths.build;
+
 
 
 module.exports = paths;
