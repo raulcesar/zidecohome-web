@@ -10,39 +10,61 @@
 @import "raul";
 @import "debugging";
 
-
-.barraIdentificadora p {
-  margin-bottom: 5px;
-}
-.barraIdentificadora {
-  //  border: 1px solid red;
-//  height: $navbar-barraIdentificadora-height;
-  width: $navbar-barraIdentificadora-width;
-  top:$navbar-barraIdentificadora-top;
-  left: 0;
-//  position: fixed;
-  padding-left: 15px;
-
-
-  text-align: left;
-//  border: 4px solid #000000;
-//  border-radius: 4px;
-  color: $navbar-barraIdentificadora-color;
-  line-height: $navbar-barraIdentificadora-height;
-  font: $navbar-barraIdentificadora-font;
-//  text-shadow: $navbar-barraIdentificadora-text-shadow;
-  background: $navbar-barraIdentificadora-background;
+.mainConteudo, .infopanel  {
+  padding-right: 0;
 }
 
+.moduleinfobar p {
+  margin-bottom: $navbar-moduleinfobar-p-margin-bottom;
+  margin-top: $navbar-moduleinfobar-p-margin-top;
+}
+
+.moduleinfobar {
+  width: $navbar-moduleinfobar-width;
+  top:$navbar-moduleinfobar-top;
+  left: $navbar-moduleinfobar-left;
+  padding: $navbar-moduleinfobar-padding;
+  margin: $navbar-moduleinfobar-margin;
+
+  text-align: $navbar-moduleinfobar-text-align;
+  border:$navbar-moduleinfobar-border;
+  border-radius: $navbar-moduleinfobar-border-radius;
+  color: $navbar-moduleinfobar-color;
+  font: $navbar-moduleinfobar-font;
+  background: $navbar-moduleinfobar-background;
+}
+
+.messaginginfobar p {
+  margin-bottom: $navbar-messaginginfobar-p-margin-bottom;
+  margin-top: $navbar-messaginginfobar-p-margin-top;
+}
+
+.messaginginfobar {
+  width: $navbar-messaginginfobar-width;
+  top:$navbar-messaginginfobar-top;
+//  left: $navbar-messaginginfobar-left;
+  right: $navbar-messaginginfobar-right;
+  padding: $navbar-messaginginfobar-padding;
+  margin: $navbar-messaginginfobar-margin;
+
+  text-align: $navbar-messaginginfobar-text-align;
+  border:$navbar-messaginginfobar-border;
+  border-radius: $navbar-messaginginfobar-border-radius;
+  color: $navbar-messaginginfobar-color;
+  font: $navbar-messaginginfobar-font;
+  background: $navbar-messaginginfobar-background;
+}
 
 
-.navbar-kd {
+
+.navbar-zideco {
   margin-bottom: 0;
   color: #000000;
   background: $navbar-background;
-//  border-bottom: 1px solid;
-  border-top-width: 0;
-  border-radius: 0;
+  border:$navbar-moduleinfobar-border;
+//  border-color: $background-geral;
+//  border-top-width: 0;
+  border-radius: $navbar-moduleinfobar-border-radius;
   position: fixed;
   right: 0;
   left: 0;
@@ -51,23 +73,34 @@
   top: 0;
 }
 
-.navbar-kd .dropdown-menu {
+.navbar-zideco .navbar-brand {
+  color: $main-textcolor;
+}
+
+.navbar-zideco .navbar-brand img {
+  height: 40px;
+  width: auto;
+  padding: 0 10px;
+}
+
+
+.navbar-zideco .dropdown-menu {
   width: $navbar-dropdownmenu-width;
   height: $navbar-dropdownmenu-height;
   right: 10px;
 }
 
-.navbar-kd .navbar-header {
+.navbar-zideco .navbar-header {
   border-bottom: 0;
 }
 
+.footer p {
+  color: $main-textcolor;
+  margin: auto;
+  bottom: 0;
+}
 
 /*AQUI VEM AS DEFINICOES DO NAV-BAR*/
-.navbar-kd .navbar-brand img {
-  height: 40px;
-  width: auto;
-  padding: 0 10px;
-}
 
 
 //

@@ -1,8 +1,32 @@
+$color-primary-0: #56BE00;	/* Main Primary color */
+$color-primary-1: #419000;
+$color-primary-2: #4CA700;
+$color-primary-3: #60D400;
+$color-primary-4: #67E400;
+
+$color-secondary-1-0: #74008C;	/* Main Secondary color (1) */
+$color-secondary-1-1: #58006B;
+$color-secondary-1-2: #66007B;
+$color-secondary-1-3: #81009D;
+$color-secondary-1-4: #8C01AA;
+
+$color-secondary-2-0: #BAD000;	/* Main Secondary color (2) */
+$color-secondary-2-1: #8E9E00;
+$color-secondary-2-2: #A4B700;
+$color-secondary-2-3: #D0E900;
+$color-secondary-2-4: #DFFA00;
+
+$color-complement-0: #BE003A;	/* Main Complement color */
+$color-complement-1: #91002C;
+$color-complement-2: #A70033;
+$color-complement-3: #D50040;
+$color-complement-4: #E50045;
 
 
-$background-geral: #6aa84f;
-$background-destaque: #597eaa;
+$background-geral: #384b65;
+$background-destaque: $background-geral;
 
+$main-textcolor: #ffffff;
 
 $navbar-background: $background-geral;
 $navbar-dropdownmenu-backgroundcolor: #FFFFFF;
@@ -17,14 +41,40 @@ $navbar-dropdownmenu-seta-before-deslocamento-top: -20px;
 $navbar-dropdownmenu-seta-after-deslocamento-right: 40px;
 $navbar-dropdownmenu-seta-after-deslocamento-top: -19px;
 
-$navbar-barraIdentificadora-height: 40px;
+$navbar-moduleinfobar-height: 40px;
+$navbar-moduleinfobar-width: 100%;
+$navbar-moduleinfobar-left: 0;
+$navbar-moduleinfobar-top: 50px;
+$navbar-moduleinfobar-color: #ffffff;
+$navbar-moduleinfobar-font: 700 12px 'Bitter';
+$navbar-moduleinfobar-margin: 5px 0 0 0;
+$navbar-moduleinfobar-padding: 0 0 0 15px;
+$navbar-moduleinfobar-border:  2px solid transparent;
+$navbar-moduleinfobar-border-radius: 0;
+$navbar-moduleinfobar-text-align: left;
+$navbar-moduleinfobar-background: $background-destaque;
+$navbar-moduleinfobar-text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
 
-$navbar-barraIdentificadora-width: 100%;
-$navbar-barraIdentificadora-top: 50px;
-$navbar-barraIdentificadora-color: #ffffff;
-$navbar-barraIdentificadora-font: 700 20px 'Bitter';
-$navbar-barraIdentificadora-background: $background-destaque;
-$navbar-barraIdentificadora-text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+$navbar-moduleinfobar-p-margin-bottom: 5px;
+$navbar-moduleinfobar-p-margin-top: 5px;
+
+$navbar-messaginginfobar-height: 40px;
+$navbar-messaginginfobar-width: 100%;
+$navbar-messaginginfobar-right: 0;
+$navbar-messaginginfobar-top: 50px;
+$navbar-messaginginfobar-color: #ffffff;
+$navbar-messaginginfobar-font: 700 12px 'Bitter';
+$navbar-messaginginfobar-margin: 5px 0 0 1px;
+$navbar-messaginginfobar-padding: 0 0 0 15px;
+$navbar-messaginginfobar-border:  2px solid transparent;
+$navbar-messaginginfobar-border-radius: 0;
+$navbar-messaginginfobar-text-align: left;
+$navbar-messaginginfobar-background: $background-destaque;
+$navbar-messaginginfobar-text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+
+$navbar-messaginginfobar-p-margin-bottom: 5px;
+$navbar-messaginginfobar-p-margin-top: 5px;
+
 
 
 $icon-width:  10px; // ~12px
@@ -64,7 +114,7 @@ $icon-module-container-height: $icon-bar-content-height;
 $icon-module-container-width-hover: $icon-module-container-width + $hover-delta;
 $icon-module-container-height-hover: $icon-module-container-height + $hover-delta;
 
-//$navbar-barraIdentificadora-background: linear-gradient(to bottom, #b5cdff 0%,#003d88 100%);
+//$navbar-moduleinfobar-background: linear-gradient(to bottom, #b5cdff 0%,#003d88 100%);
 //dfdsf
 
 

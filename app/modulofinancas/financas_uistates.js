@@ -9,12 +9,19 @@ var zidecoFinancasStates = angular.module('zideco.financas.uistates', ['ui.route
 
 zidecoFinancasStates.config(['$stateProvider', function ($stateProvider) {
 
+
   $stateProvider
     .state('zideco.finance', {
       url: '/finance',
       templateUrl: 'modulofinancas/financasmain.html',
+          data: {
+              moduleName: 'Finance'
+          },
       controller: 'financasCtrlMain'
     })
+
+
+
 //    .state('pessoatestes', {
 //      url: '/pessoatestes',
 //      templateUrl: 'modulopessoas/TesteSidebar.html',

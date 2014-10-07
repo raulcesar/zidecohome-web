@@ -98,7 +98,7 @@ gulp.task('AppCSS', function () {
     return es.merge(
         sassFiles.pipe(plugins.sass()),
         cssFiles)
-        .pipe(plugins.changed(paths.build))
+//        .pipe(plugins.changed(paths.build))
         .pipe(plugins.concat('app.css'))
         .pipe(plugins.autoprefixer('last 2 versions'))
         .pipe(minifyCSS())

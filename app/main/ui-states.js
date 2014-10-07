@@ -17,7 +17,7 @@ zidecoStates.config(['$stateProvider', '$urlRouterProvider', function ($statePro
             url: '/zideco',
             templateUrl: 'main/statemain.html',
             data: {
-                moduleName: 'ZIDECO'
+                moduleName: 'Main'
             },
             controller: 'mainCtrl'
         })

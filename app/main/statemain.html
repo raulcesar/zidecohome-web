@@ -1,7 +1,9 @@
-<nav class="navbar navbar-kd" role="navigation">
+<nav class="navbar navbar-zideco" role="navigation">
 
     <div class="navbar-header">
-        <a class="icon-bar-image icon-bar-kdmain" ui-sref="zideco" href="#"></a>
+        <a class="navbar-brand" ui-sref="zideco">Zideco</a>
+        <!--<a class="icon-bar-image icon-bar-kdmain" ui-sref="zideco" href="#">Z</a>-->
+        <!--<a class="icon-bar-image icon-bar-kdmain" ui-sref="zideco" href="#">Zideco</a>-->
     </div>
 
 
@@ -49,7 +51,7 @@
 
                             <!--<a class="icon-bar-image icon-module icon-module-pessoas" href="#" ui-sref="kd.pessoamain" title="Módulo Pessoas"></a>-->
                             <a class="icon-bar-image icon-module fa fa-group" href="#" ui-sref="zideco.finance" title="Finance Module"></a>
-                            <p>Pessoas (A)</p>
+                            <p>Finance</p>
                         </div>
 
                         <!--<div class="icon-module-container">-->
@@ -126,31 +128,9 @@
 
     </div>
 
-    <!--<div class="barraIdentificadora">-->
-    <!--<p>{{nomeModulo()}}Módulo {{$state.current.data.moduleName}}</p>-->
-    <!--</div>-->
-
 </nav>
 
 
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-sm-6 text-left">
-                <p class="text-muted">Place sticky footer content here.</p>
-                <!--<p>-->
-                <!--<small>aqui vao os "powered by"</small>-->
-                <!--</p>-->
-            </div>
-
-            <div class="col-sm-6 text-right">
-                <p>
-                    <small>{{'v. %VERSION% ' | interpolate}} &copy; zideco.org</small>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 
 <!-- MAIN CONTENT -->
@@ -170,21 +150,39 @@
     <div id="mainConteudo" class="col-xs-12 mainConteudo">
         <div class="row-fluid">
             <div class="col-xs-12 col-md-10 painel-conteudo-modulo ">
-                <div class="barraIdentificadora">
+                <div class="moduleinfobar">
                     <p>{{$state.current.data.moduleName}}</p>
                 </div>
             </div>
+
+            <div class="col-xs-12 col-md-2 painel-conteudo-modulo ">
+                <div class="messaginginfobar">
+                    <p>Social</p>
+                </div>
+            </div>
         </div>
+
         <div class="row-fluid">
 
-            <div id="mainPainelEsquerdo" class="col-xs-12 col-md-10 painel-conteudo-modulo ">
+            <div class="col-xs-12 col-md-10 modulepanel ">
                 <!--<div id="mainPainelEsquerdoConteudo" ui-view class="container full-height"></div>-->
                 <div ui-view class="container full-height"></div>
             </div>
 
-            <div id="mainPainelDireito" class="col-xs-12 col-md-2 painel-principal-direito">
-                <span class="glyphicon glyphicon-search"></span>
-                <p>Painel direito</p>
+            <div class="col-xs-12 col-md-2 infopanel">
+                <!--<span class="glyphicon glyphicon-search"></span>-->
+                <!--<pre>-->
+                  <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+                <p>$state = {{$state.current.name}}</p>
+                <p>$stateParams = {{$stateParams}}</p>
+                <p>$state full url = {{ $state.$current.url.source }}</p>
+
+
+
+                  <!-- $state.$current is not a public api, we are using it to
+                       display the full url for learning purposes-->
+                <!--</pre>-->
+
             </div>
 
         </div>
@@ -192,3 +190,21 @@
 </div>
 
 <!--</div>-->
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-6 text-left">
+                <p class="text-muted">Place sticky footer content here.</p>
+                <!--<p>-->
+                <!--<small>aqui vao os "powered by"</small>-->
+                <!--</p>-->
+            </div>
+
+            <div class="col-sm-6 text-right">
+                <p>
+                    <small>{{'v. %VERSION% ' | interpolate}} &copy; zideco.org</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
