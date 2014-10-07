@@ -1,23 +1,27 @@
 /**
- * Created by raul on 05/06/14.
- */
-/**
  * Created by raul on 4/30/14.
  */
 
+'use strict';
 
-var zidecoFinancasStates = angular.module('zideco.financas.uistates', []);
+var zidecoFinancasStates = angular.module('zideco.financas.uistates', ['ui.router']);
 
 
 zidecoFinancasStates.config(['$stateProvider', function ($stateProvider) {
-  'use strict';
+
 
   $stateProvider
-    .state('financasmain', {
-      url: '/financas',
+    .state('zideco.finance', {
+      url: '/finance',
       templateUrl: 'modulofinancas/financasmain.html',
+          data: {
+              moduleName: 'Finance'
+          },
       controller: 'financasCtrlMain'
     })
+
+
+
 //    .state('pessoatestes', {
 //      url: '/pessoatestes',
 //      templateUrl: 'modulopessoas/TesteSidebar.html',

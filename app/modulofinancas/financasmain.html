@@ -1,16 +1,5 @@
-<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="zidecomain">ZIDECO</a>
-        <a class="navbar-brand"><sub>módulo finanças</sub></a>
-
-    </div>
-    <ul class="nav navbar-nav">
-        <!--<li><a ui-sref="finance">{{MODULE-NAME-FINANCE}}</a></li>-->
-    </ul>
-</nav>
-
 <!-- MAIN CONTENT -->
-<div class="container">
-    <div ui-view></div>
-
+<div class="container module-container" ui-i18n="{{lang}}">
+    <p>hello</p>
+    <div ui-grid="gridOptions" class="grid-spreadsheet" ></div>
 </div>
