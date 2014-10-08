@@ -32,10 +32,10 @@ var paths = {
     templates: ['!./app/index.html', './app/**/*.html'],
 
 
-    vendorcss: [
-        './app/assets/style/external/**/*.css',
-//        './bower_components/ng-grid/*.css'
-        './bower_components/angular-ui-grid/ui-grid.min.css'
+  vendorcss: [
+        './app/assets/style/external/**/*.css'
+      //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
+//        './bower_components/angular-ui-grid/ui-grid.min.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 
@@ -54,8 +54,9 @@ var paths = {
         './bower_components/restangular/dist/restangular.min.js',
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/angular-gravatar/build/*.min.js',
-//        './bower_components/ng-grid/build/ng-grid.min.js',
-        './bower_components/angular-ui-grid/ui-grid.min.js',
+      //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
+//        './bower_components/angular-ui-grid/ui-grid.min.js',
+
         './bower_components/angular-sanitize/angular-sanitize.min.js',
         './bower_components/ng-file-upload/angular-file-upload.min.js',
 
@@ -68,7 +69,6 @@ var paths = {
     ],
 
     //TODO: Criar tratamento distinto para "libs js" que não estao minimizados.
-    vendorCSS: ['!./bower_components/**/*.min.css', './bower_components/**/*.css'],
     build: './build',
     images: ['./app/**/*.ico', './app/**/*.jpg', './app/**/*.png', './app/**/*.jpeg'],
     mockFiles: ['./app/mockdata/**/*.json']
@@ -78,10 +78,11 @@ paths.buildfonts = paths.build + '/assets/fonts';
 
 //The uigrid needs special consideration.
 paths.uigridfonts = [
-    './bower_components/angular-ui-grid/*.eot',
-    './bower_components/angular-ui-grid/*.svg',
-    './bower_components/angular-ui-grid/*.ttf',
-    './bower_components/angular-ui-grid/*.woff'
+  //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
+  './app/assets/style/external/ui-grid/*.eot',
+    './app/assets/style/external/ui-grid/*.svg',
+    './app/assets/style/external/ui-grid/*.ttf',
+    './app/assets/style/external/ui-grid/*.woff'
 ];
 paths.uigridbuildfonts = paths.build;
 
