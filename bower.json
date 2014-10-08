@@ -8,7 +8,6 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "angular-ui-grid": "~3.0.0-rc.11",
     "angular": "~1.2.26",
     "angular-ui-router": "~0.2.11",
     "restangular": "~1.4.0",

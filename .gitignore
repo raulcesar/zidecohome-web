@@ -6,3 +6,4 @@ build/
 *.iml
 app/pocs/
 .sass-cache
+lint-reports/
