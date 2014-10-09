@@ -1,10 +1,10 @@
 'common service goes here';
 
-var kdServices = angular.module('zideco.services', [])
+var zidecoServices = angular.module('zideco.services', [])
   .constant('version', '0.0.1');
 
 
-kdServices
+zidecoServices
   .factory('LASTURL', ['$log', 'webStorage',  function($log, webStorage) {
     var _lasturl = webStorage.session.get('lasturl');
     var _lastTryError = undefined;
@@ -39,8 +39,15 @@ kdServices
 ;
 
 
-kdServices
-  .factory('Interceptors', ['$q', '$rootScope', '$log', 'LASTURL', '$location', function($q, $rootScope, $log, LASTURL, $location) {
+zidecoServices.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (socketFactory, CONFIG) {
+  return socketFactory({
+    ioSocket: io.connect(CONFIG.MessageIoSocketUrl)
+  });
+}]);
+
+
+
+zidecoServices.factory('Interceptors', ['$q', '$rootScope', '$log', 'LASTURL', '$location', function($q, $rootScope, $log, LASTURL, $location) {
   return {
 //    'request': function(config) {
 ////      LASTURL.setLasturl({url: config.url});

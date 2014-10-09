@@ -4,6 +4,6 @@ testReports/
 .idea
 build/
 *.iml
-app/pocs/
+app/scratch/
 .sass-cache
 lint-reports/

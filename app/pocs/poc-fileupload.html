@@ -1,0 +1,20 @@
+<div ng-controller="pocCtrl">
+    <input type="text" ng-model="clientid">
+    {{fileReaderSupported}}
+
+    <input type="file" ng-file-select="onFileSelect($files)">
+    <input type="file" ng-file-select="onFileSelect($files)" multiple >
+
+    <div class="container">
+        <div ng-repeat="f in selectedFiles">
+            <progressbar ng-class="progress[$index].classes" class="progress-striped active" value="progress[$index].progress" type="{{progress[$index].type}}">
+                <!--<progressbar  class="progress-striped " value="progress[0].progress" type="{{progress[$index].type}}">-->
+                {{progress[$index].progress}}
+            </progressbar>
+            <button class="btn" ng-click="abort($index)" ng-show="showAbortButton($index)">Abort</button>
+            {{f.name}} - size: {{f.size}}B - type: {{f.type}}
+        </div>
+    </div>
+
+    <input type="button" ng-click="onFileUpload()" value="Upload"/>
+</div>

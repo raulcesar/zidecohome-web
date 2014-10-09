@@ -18,6 +18,8 @@
     "angular-mocks": "~1.2.26",
     "angular-gravatar": "~0.2.1",
     "angular-animate": "~1.2.26",
-    "ng-file-upload": "~1.6.12"
+    "ng-file-upload": "~1.6.12",
+    "socket.io-client": "~1.1.0",
+    "angular-socket-io": "~0.6.0"
   }
 }

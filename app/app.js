@@ -18,7 +18,8 @@ var zideco = angular.module('zideco',[
 
   //Modulo principal do FINANCAS
   'zideco.financas',
-  'zideco.pocs'
+  'zideco.pocs',
+  'btford.socket-io'
 
 ]);
 //  [
@@ -63,6 +64,8 @@ zideco.config(['RestangularProvider', 'CONFIG', function (RestangularProvider, C
   RestangularProvider.setBaseUrl(CONFIG.RestangularBaseUrl);
 }]);
 
+
+
 //Configuração do servico de HTTP
 zideco.config(['$httpProvider', function($httpProvider) {
   $httpProvider.defaults.withCredentials = true;
@@ -75,6 +78,8 @@ zideco.config(['$httpProvider', function($httpProvider) {
   $httpProvider.interceptors.push('Interceptors');
 }]
 );
+
+
 
 //
 //kd.config(['gravatarServiceProvider', function(gravatarServiceProvider) {
