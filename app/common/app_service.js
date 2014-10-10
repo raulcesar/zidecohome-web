@@ -40,9 +40,13 @@ zidecoServices
 
 
 zidecoServices.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (socketFactory, CONFIG) {
-  return socketFactory({
-    ioSocket: io.connect(CONFIG.MessageIoSocketUrl)
+  var mySocket = socketFactory({
+
+    ioSocket: io.connect(CONFIG.MessageIoSocketUrl, {query: 'token=' + 'blabla'})
   });
+
+  mySocket.forward('news');
+  return mySocket;
 }]);
 
 
