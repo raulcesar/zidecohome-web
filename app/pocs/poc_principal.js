@@ -22,6 +22,12 @@ zidecopoc.controller('pocCtrl', ['$scope', 'MESSAGEIOSOCKET', function ($scope, 
     $scope.message = data;
   });
 
+  $scope.$on('socket:error', function (ev, data) {
+    var msg = 'ocorreu pau: ' + data;
+    console.log(msg);
+    $scope.message.texto   = msg;
+  });
+
   $scope.mandaMensagem = function() {
     console.log('vou tentar emit');
     MESSAGEIOSOCKET.emit('chat', $scope.message.texto, function(message, error) {

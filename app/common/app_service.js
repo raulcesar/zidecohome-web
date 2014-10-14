@@ -41,11 +41,11 @@ zidecoServices
 
 zidecoServices.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (socketFactory, CONFIG) {
   var mySocket = socketFactory({
-
-    ioSocket: io.connect(CONFIG.MessageIoSocketUrl, {query: 'token=' + 'blabla'})
+      ioSocket: io.connect(CONFIG.MessageIoSocketUrl, {query: 'token=' + 'blabla'})
   });
 
   mySocket.forward('news');
+  mySocket.forward('error');
   return mySocket;
 }]);
 
