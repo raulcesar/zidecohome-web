@@ -15,11 +15,31 @@ var zidecopoc = angular.module('zideco.pocs', [
 
 zidecopoc.controller('pocCtrl', ['$scope', 'MESSAGEIOSOCKET', function ($scope, MESSAGEIOSOCKET) {
 
-  $scope.message = '';
-  MESSAGEIOSOCKET.on('news', function (data) {
+  $scope.message = {texto: ''};
+
+  $scope.$on('socket:news', function (ev, data) {
     console.log(data);
     $scope.message = data;
   });
+
+  $scope.$on('socket:error', function (ev, data) {
+    var msg = 'ocorreu pau: ' + data;
+    console.log(msg);
+    $scope.message.texto   = msg;
+  });
+
+  $scope.mandaMensagem = function() {
+    console.log('vou tentar emit');
+    MESSAGEIOSOCKET.emit('chat', $scope.message.texto, function(message, error) {
+      console.log('error:' + error);
+      console.log('message: ' + JSON.stringify(message))
+      $scope.message = message;
+    });
+  }
+//  MESSAGEIOSOCKET.on('news', function (data) {
+//    console.log(data);
+//    $scope.message = data;
+//  });
 
   var user = {'name': 'raul',
     'email':'raul.teixeira@gmail.com'
