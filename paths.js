@@ -33,9 +33,9 @@ var paths = {
 
 
   vendorcss: [
-        './app/assets/style/external/**/*.css'
+        './app/assets/style/external/**/*.css',
       //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
-//        './bower_components/angular-ui-grid/ui-grid.min.css'
+        './bower_components/angular-ui-grid/ui-grid.min.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 
@@ -55,7 +55,7 @@ var paths = {
         './bower_components/jquery/dist/jquery.min.js',
         './bower_components/angular-gravatar/build/*.min.js',
       //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
-//        './bower_components/angular-ui-grid/ui-grid.min.js',
+        './bower_components/angular-ui-grid/ui-grid.min.js',
 
         './bower_components/angular-sanitize/angular-sanitize.min.js',
         './bower_components/ng-file-upload/angular-file-upload.min.js',
@@ -77,13 +77,21 @@ var paths = {
 paths.buildfonts = paths.build + '/assets/fonts';
 
 //The uigrid needs special consideration.
+//paths.uigridfonts = [
+//  './app/assets/style/external/ui-grid/*.eot',
+//    './app/assets/style/external/ui-grid/*.svg',
+//    './app/assets/style/external/ui-grid/*.ttf',
+//    './app/assets/style/external/ui-grid/*.woff'
+//];
+
+//TODO: quando o UI-GRID vier do bower, temos que colocar abaixo. e comentar acima.
 paths.uigridfonts = [
-  //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
-  './app/assets/style/external/ui-grid/*.eot',
-    './app/assets/style/external/ui-grid/*.svg',
-    './app/assets/style/external/ui-grid/*.ttf',
-    './app/assets/style/external/ui-grid/*.woff'
+  './bower_components/angular-ui-grid/*.eot',
+  './bower_components/angular-ui-grid/*.svg',
+  './bower_components/angular-ui-grid/*.ttf',
+  './bower_components/angular-ui-grid/*.woff'
 ];
+
 paths.uigridbuildfonts = paths.build;
 
 
