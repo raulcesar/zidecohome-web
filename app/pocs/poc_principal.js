@@ -8,12 +8,57 @@
 var zidecopoc = angular.module('zideco.pocs', [
     'zideco.pocs.uistates',
     'ui.bootstrap',
-    'angularFileUpload'
+    'angularFileUpload',
+    'ezfb'
   ]
 );
 
+zidecopoc.config(function (ezfbProvider) {
+  ezfbProvider.setInitParams({
+    // This is my FB app id for plunker demo app
+    appId: '265751283548576',
+    xfbml      : true,
 
-zidecopoc.controller('pocCtrl', ['$scope', 'MESSAGEIOSOCKET', function ($scope, MESSAGEIOSOCKET) {
+    // Module default is `v1.0`.
+    // If you want to use Facebook platform `v2.0`, you'll have to add the following parameter.
+    // https://developers.facebook.com/docs/javascript/reference/FB.init/v2.0
+    version: 'v2.1'
+  });
+});
+
+
+zidecopoc.controller('pocCtrl', ['$scope', 'MESSAGEIOSOCKET', 'ezfb', function ($scope, MESSAGEIOSOCKET, ezfb) {
+  /**
+   * Update loginStatus result
+   */
+  function updateLoginStatus (more) {
+    ezfb.getLoginStatus(function (res) {
+      $scope.loginStatus = res;
+
+      (more || angular.noop)();
+    });
+  }
+
+  /**
+   * Update api('/me') result
+   */
+  function updateApiMe () {
+    ezfb.api('/me', function (res) {
+      $scope.apiMe = res;
+    });
+  }
+
+  $scope.getname = function() {
+    ezfb.api('/me', {fields: 'last_name'}, function(response) {
+      console.log(response);
+    });
+  };
+
+
+  updateLoginStatus(updateApiMe);
+
+
+
 
   $scope.message = {texto: ''};
 
@@ -159,7 +204,6 @@ zidecopoc.controller('pocCtrl', ['$scope', 'MESSAGEIOSOCKET', function ($scope, 
 //      {name: 'fo', ponto: 'fum'},
 //    ]
 //  };
-
 
 
 

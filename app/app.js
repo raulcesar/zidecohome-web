@@ -75,7 +75,7 @@ zideco.config(['$httpProvider', function($httpProvider) {
 
 zideco.config(['$httpProvider', function($httpProvider) {
   //Inlcui interceptores aqui. Eles são definidos no moldulo de servico (service)
-  $httpProvider.interceptors.push('Interceptors');
+//  $httpProvider.interceptors.push('Interceptors');
 }]
 );
 

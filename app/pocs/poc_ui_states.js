@@ -18,6 +18,19 @@ zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
        url: '/uigrid',
        templateUrl: 'pocs/poc-uigrid.html',
        controller: 'pocCtrl'
+     })
+     .state('pocs.message', {
+       url: '/message',
+       templateUrl: 'pocs/poc-message.html',
+       controller: 'pocCtrl'
+
+     })
+
+
+     .state('pocs.facebook', {
+       url: '/facebook',
+       templateUrl: 'pocs/poc-facebook.html',
+       controller: 'pocCtrl'
 
      })
      .state('pocsfileupload', {
