@@ -91,9 +91,6 @@ paths.uigridfonts = [
   './bower_components/angular-ui-grid/*.ttf',
   './bower_components/angular-ui-grid/*.woff'
 ];
-
 paths.uigridbuildfonts = paths.build;
-
-
 
 module.exports = paths;

@@ -1,0 +1,74 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1142" measuredH="537" mockupW="1142" mockupH="537">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="1033" h="83" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::IconLabel" x="844" y="22" w="-1" h="-1" measuredW="54" measuredH="39" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>DollarIcon%7Csmall</icon>
+        <text>Finances</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::IconLabel" x="913" y="22" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>RedditIcon%7Csmall</icon>
+        <text>Health</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::IconLabel" x="966" y="22" w="-1" h="-1" measuredW="27" measuredH="39" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Csmall</icon>
+        <text>Raul</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::IconLabel" x="15" y="22" w="-1" h="-1" measuredW="54" measuredH="39" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>DollarIcon%7Csmall</icon>
+        <text>Finances</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="456" y="31" w="-1" h="-1" measuredW="93" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Zidco%20-%20Finance</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::DataGrid" x="0" y="112" w="1032" h="425" measuredW="232" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Description%2CValue%2CCurrency%2CDate</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::ComboBox" x="475" y="89" w="-1" h="-1" measuredW="140" measuredH="46" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Show%20only%20pending%0AShow%20all</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="85" w="113" h="-1" measuredW="45" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>value</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::TextInput" x="120" y="85" w="113" h="-1" measuredW="41" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>date</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="239" y="85" w="113" h="-1" measuredW="41" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>date</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="360" y="85" w="-1" h="-1" measuredW="44" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>add</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::ComboBox" x="419" y="89" w="-1" h="-1" measuredW="48" measuredH="62" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>R%24%0AUSD%24%0AE%24</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::StickyNote" x="1033" y="0" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Optional%20Columns%3A%0A%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
