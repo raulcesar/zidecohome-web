@@ -21,7 +21,7 @@
     "ng-file-upload": "~1.6.12",
     "socket.io-client": "~1.1.0",
     "angular-socket-io": "~0.6.0",
-    "angular-ui-grid": "~3.0.0-rc.12",
+    "angular-ui-grid": "~3.0.0-rc.21",
     "angular-easyfb": "~1.2.0"
   }
 }

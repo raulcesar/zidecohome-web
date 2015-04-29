@@ -1,10 +1,12 @@
-'common service goes here';
+'use strict';
 
-var zidecoServices = angular.module('zideco.services', [])
-  .constant('version', '0.0.1');
+// 'common service goes here';
+
+angular.module('zideco.services', [])
+  .constant('version', '0.0.1')
 
 
-zidecoServices
+
   .factory('LASTURL', ['$log', 'webStorage',  function($log, webStorage) {
     var _lasturl = webStorage.session.get('lasturl');
     var _lastTryError = undefined;
@@ -36,10 +38,9 @@ zidecoServices
       }
     };
   }])
-;
 
 
-zidecoServices.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (socketFactory, CONFIG) {
+.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (socketFactory, CONFIG) {
   var mySocket = socketFactory({
       ioSocket: io.connect(CONFIG.MessageIoSocketUrl, {query: 'token=' + 'blabla'})
   });
@@ -47,11 +48,11 @@ zidecoServices.factory('MESSAGEIOSOCKET', ['socketFactory', 'CONFIG', function (
   mySocket.forward('news');
   mySocket.forward('error');
   return mySocket;
-}]);
+}])
 
 
 
-zidecoServices.factory('Interceptors', ['$q', '$rootScope', '$log', 'LASTURL', '$location', function($q, $rootScope, $log, LASTURL, $location) {
+.factory('Interceptors', ['$q', '$rootScope', '$log', 'LASTURL', '$location', function($q, $rootScope, $log, LASTURL, $location) {
   return {
 //    'request': function(config) {
 ////      LASTURL.setLasturl({url: config.url});

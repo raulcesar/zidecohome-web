@@ -1,0 +1,66 @@
+<nav class="navbar navbar-zideco" role="navigation">
+    <div class="navbar-header">
+        <!-- Today just the name... -->
+        <a class="navbar-brand" ui-sref="zideco.landing">Zideco</a>
+        <!-- Futuramente, aqui seria o modulo ativo! -->
+    </div>
+
+
+    <!-- TODO: Futuramente aqui seria os "invisíveis" -->
+    <div class="navbar-header navbar-right ">
+
+        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
+            <a class="icon-bar-image fa fa-clock-o" href="" title="Horas" ui-sref="zideco.hours"></a>
+        </div>
+
+        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
+            <a class="icon-bar-image fa fa-dollar" href="" title="Finance"  ui-sref="zideco.finance"></a>
+        </div>
+
+        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
+            <a class="icon-bar-image fa fa-cogs" href="" title="Configurações do Sistema"></a>
+        </div>
+
+        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
+            <a class="icon-bar-image fa fa-user" href="" title="{{user.username}} ({{user.emailCamara}}"></a>
+        </div>
+
+
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="col-xs-12 mainContent">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 panel-module ">
+            <div ui-view class="container zero-padding"></div>
+        </div>
+        <div class="col-xs-12 col-md-2 panel-info">
+            <p>$state = {{$state.current.name}}</p>
+            <p>$stateParams = {{$stateParams}}</p>
+            <p>$state full url = {{ $state.$current.url.source }}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-6 text-left">
+                <p class="text-muted">Place sticky footer content here.</p>
+            </div>
+
+            <div class="col-sm-6 text-right">
+                <p>
+                    <small>{{'v. %VERSION% ' | interpolate}} &copy; zideco.org</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+ -->

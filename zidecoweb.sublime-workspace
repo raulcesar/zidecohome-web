@@ -1,0 +1,1262 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"funcse",
+				"funcSelecionaArquivo"
+			],
+			[
+				"funcpe",
+				"funcPesqObjetivoProcesso"
+			],
+			[
+				"bor",
+				"border-width"
+			],
+			[
+				"salv",
+				"salvarPessoa"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"bo",
+				"bds:o	border-style:outset"
+			],
+			[
+				"campos",
+				"camposALimpar"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"padd",
+				"padding-bottom:   (property)"
+			],
+			[
+				"togg",
+				"toggleSelecao"
+			],
+			[
+				"indi",
+				"indicesAtivos"
+			],
+			[
+				"situa",
+				"situacao"
+			],
+			[
+				"indes",
+				"indexes"
+			],
+			[
+				"nova",
+				"novaPessoa"
+			],
+			[
+				"colo",
+				"color:   (property)"
+			],
+			[
+				"angular-ui",
+				"angular-ui-utils/"
+			],
+			[
+				"poc_ui_cal",
+				"poc_ui_calendar.js"
+			],
+			[
+				"uigrid",
+				"uigrid"
+			],
+			[
+				"pes",
+				"pesquisa"
+			],
+			[
+				"busca",
+				"buscaPessoa"
+			],
+			[
+				"ap",
+				"app/"
+			],
+			[
+				"a",
+				"app/"
+			],
+			[
+				"busc",
+				"buscaGruposAbertos"
+			],
+			[
+				"regi",
+				"registermultitask	grunt.registerMultiTask"
+			],
+			[
+				"g",
+				"grunt	Grunt Wrapper"
+			],
+			[
+				"input",
+				"inputEnabled"
+			],
+			[
+				"js",
+				"state_load.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 9755,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 312.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"form",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"conn",
+				"SQLExec: List connections"
+			],
+			[
+				"connec",
+				"SQLExec: List connections"
+			],
+			[
+				"select",
+				"Bookmarks: Select All"
+			],
+			[
+				"g",
+				"Gulp"
+			],
+			[
+				"gu",
+				"Gulp: Kill running tasks"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"sass",
+				"Set Syntax: SCSS"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"CSS3: Insert Reset"
+			],
+			[
+				"sscs",
+				"Set Syntax: CSS3"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"format",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"forma",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"for",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"gutter",
+				"CSS3: Clear Gutter Marks"
+			],
+			[
+				"co",
+				"Color Picker"
+			],
+			[
+				"grunt ",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"gr",
+				"Grunt"
+			],
+			[
+				"gru",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"html",
+				"SublimeLinter: Choose Mark Style"
+			],
+			[
+				"pc",
+				"Package Control: List Packages"
+			],
+			[
+				"com",
+				"Toggle Block Comment"
+			],
+			[
+				"pcd",
+				"Package Control: Disable Package"
+			],
+			[
+				"op",
+				"File: Open In Browser - Production Server"
+			],
+			[
+				"gul",
+				"Gulp: Show panel"
+			],
+			[
+				"colop",
+				"Color Picker"
+			],
+			[
+				"GUL",
+				"Gulp"
+			],
+			[
+				"fo",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"grunt",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"grun",
+				"Grunt"
+			],
+			[
+				"todo",
+				"TodoReview: Project Files"
+			],
+			[
+				"gulp ",
+				"Gulp"
+			],
+			[
+				"task",
+				"Tasks: New document"
+			],
+			[
+				"Snippet: grm",
+				"Snippet: grunt.registerMultiTask"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"gitgutter",
+				"GitGutter: Show Comparing Against"
+			],
+			[
+				"gitgu",
+				"GitGutter: Compare Against HEAD"
+			],
+			[
+				"gitg",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"gits",
+				"GitStatus: Changed files"
+			],
+			[
+				"git",
+				"GitStatus: Changed files"
+			],
+			[
+				"phas",
+				"Snippet: Phaser.utils.extend"
+			],
+			[
+				"gitstatus",
+				"Git: Status"
+			],
+			[
+				"sspla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"sssa",
+				"Set Syntax: Sass"
+			],
+			[
+				"",
+				"AutoFileName: Default Settings"
+			],
+			[
+				"autof",
+				"AutoFileName: Quick Settings"
+			],
+			[
+				"auto",
+				"AutoFileName: Default Settings"
+			],
+			[
+				"au",
+				"AutoFileName: Quick Settings"
+			],
+			[
+				"ssgi",
+				"Set Syntax: Git Ignore"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git di",
+				"Git: Diff Staged Files"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git gui",
+				"Git: Gui"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pacak",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 584.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"view.run_command('helloplug')",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(false)",
+			"sublime.log_commands(True)",
+			"view.run_command('example')",
+			"view.run_command('commit_completion')",
+			"view.run_command('example')",
+			"view.run_command('helloplug')",
+			"git status",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/raul/DevProjects/zidecohome-web"
+	],
+	"file_history":
+	[
+		"/home/raul/DevProjects/zidecohome-web/Gruntfile.js",
+		"/home/raul/DevProjects/zidecohome-api/package.json",
+		"/home/raul/DevProjects/zidecohome-api/zidecoseq/wrappers.js",
+		"/home/raul/DevProjects/zidecohome-api/infra/middleware.js",
+		"/home/raul/DevProjects/zidecohome-api/zidecoseq/index.js",
+		"/home/raul/DevProjects/zidecohome-api/server.js",
+		"/home/raul/DevProjects/zidecohome-api/passport-oauth2-clientside/lib/strategy.js",
+		"/home/raul/DevProjects/zidecohome-api/passport-oauth2-clientside/lib/index.js",
+		"/home/raul/DevProjects/zidecohome-api/infra/passportconf.js",
+		"/home/raul/DevProjects/zidecohome-api/passport-oauth2-clientside/package.json",
+		"/home/raul/DevProjects/zidecohome-api/models/mixins/mixins.js",
+		"/home/raul/DevProjects/zidecohome-api/node_modules/sequelize/lib/sequelize.js",
+		"/home/raul/DevProjects/zidecohome-api/zidecohome-api.sublime-project",
+		"/home/raul/DevProjects/zidecohome-api/models/currency.js",
+		"/home/raul/DevProjects/zidecohome-api/infra/router.js",
+		"/home/raul/DevProjects/zidecohome-api/infra/conf.js",
+		"/home/raul/DevProjects/zidecohome-api/routes/simpleroute.js",
+		"/home/raul/DevProjects/zidecohome-api/routes/currency",
+		"/home/raul/DevProjects/zidecohome-api/.gitignore",
+		"/home/raul/DevProjects/zidecohome-api/models/index.js",
+		"/home/raul/DevProjects/zidecohome-api/routes/message.js",
+		"/home/raul/DevProjects/zidecohome-api/.jshintrc",
+		"/home/raul/.config/sublime-text-3/Packages/User/SQLExec.sublime-settings",
+		"/home/raul/Downloads/jenkins/META-INF/MANIFEST.MF",
+		"/home/raul/DevProjects/zidecohome-api/zideco-api.sublime-project",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/form-pessoal-2.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/src/core/format_parser.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_forms.scss",
+		"/home/raul/DevProjects/cedi/kd-frontend/kd-frontend.iml",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefas_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloarquivo/arquivo_ctrl.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloconfiguracoes/configuracoes_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_cadastro_controllers.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_principal.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_dropdown.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/paths.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefaspesquisa.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa-painelpesquisa.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa-cadastro.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/app.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/coverage/Chrome 38.0.2125 (Linux)/app/moduloprocessos/processos_controller.js.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processos_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetos_controller_pesquisa.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloagenda/agenda_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefas_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloagenda/agendapesquisa.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloagenda/agendalocal.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/angular-gravatar/build/angular-gravatar.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projeto_principal.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetospesquisa.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/lint-reports/processos_controller-jslint_xml-log.xml",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processospesquisa.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/common/app_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_layoutareaconteudo.scss",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processoscadastro.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/index.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefascadastro.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefamain.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloconfiguracoes/tabauxiliares_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloarquivo/arquivomain.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloarquivo/arquivo.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/i18n/ar-QA.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloagenda/agenda_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/jquery/src/effects.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/linterrorlog/errors_pessoa_controller.js.txt",
+		"/home/raul/DevProjects/cedi/kd-frontend/lint-reports/pessoa_cadastro_controllers-jslint_xml-log.xml",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processos_uistates.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processos_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc-fileupload.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_FormDadosPrincipaisCtrlSpec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetoscadastro.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/form-pessoal.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/fullcalendar/dist/lang-all.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/angular-gravatar/LICENSE",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/moment/locale/fo.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/app.scss",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/forstudy/ServicosCedi.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/jquery/src/serialize.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/model/Setor.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/main/statemain.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_navbar.scss",
+		"/home/raul/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/raul/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa-lista.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoamain.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/e2e/pesquisaScenario.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_principal.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetos_repo_services.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_ModalInstanceCtrlSpec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/karma-testes.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_controller_semgrid.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_PessoasPesquisaCtrlSpec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/testes/unit/appSpec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_PessoaModelSpec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/e2e/pages/PessoaMainPagina.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/common/app_filters.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/env/config-production.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/main/testes/unit/main_controller_spec.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/main/main_controller.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/main/main_ui_states.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/images/kd_adicionar_tarefas_rapido.svg",
+		"/home/raul/.config/sublime-text-3/Packages/CSS Extended Completions/css_style_completions.sublime-settings",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_debugging.scss",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/test.css",
+		"/home/raul/.config/sublime-text-3/Packages/User/css_style_completions.sublime-settings",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/pocs.html",
+		"/home/raul/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf-isolated.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/gulpfile.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/external/bootstrap.css",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/i18n/pa-IN.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/production/i18n/en-AU.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf.jenkins.js",
+		"/home/raul/Downloads/bootstrap-sass-3.3.1/bower.json",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_dropdown_ctrl.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_ui_states.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/build/lib.css",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/external/bootstrap/_component-animations.scss",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_ui_calendar.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower.json",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetos_uistates.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetomain.html",
+		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/testes/e2e/pages/ProjetoMainPagina.js"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"/home/raul/DevProjects/cedi/kd-frontend/app",
+			"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style",
+			"/home/raul/DevProjects/cedi/kd-frontend/app",
+			"/home/raul/DevProjects/cedi/kd-frontend"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'",
+			"attributes",
+			"define",
+			"'",
+			"\n",
+			",",
+			"'",
+			",",
+			"a.",
+			"chkDescricao",
+			"chkTitulo,'",
+			",",
+			"funcSelecionaArquivoProjeto",
+			"funcSelecionaProjeto",
+			"!=",
+			"pesquisaUnidadeProcesso",
+			"funcError",
+			"!=",
+			"funcSucesso",
+			",",
+			"todasTarefas",
+			"id=\"",
+			"class=\"kdRequired fa",
+			"inputPonto",
+			"required",
+			"id=",
+			"<span ng-class=\"{'fa fa-",
+			"fa-dot-circle-o",
+			"file",
+			"fa-file-o",
+			"dot-circle-o",
+			"incluirAlerta",
+			"titulo",
+			"$Modal",
+			"$modal",
+			"$Modal",
+			"Modal",
+			"kdModal",
+			"$kdModal",
+			"$modal",
+			"projetoRepoService",
+			"modalInstance",
+			"modal",
+			"CONFIG",
+			"Auth",
+			"$scope.searchOnToggle",
+			"marcaOpecoesDefault",
+			"pesquisapessoa()",
+			"pesquisaPessoa",
+			"marcaSituacaoFiltroAcordionGrupo",
+			"limpaCriteriosEPesquisa",
+			"</a><",
+			"\">",
+			">",
+			"\n                ",
+			"i",
+			": ",
+			"focus",
+			"class",
+			"\"\"",
+			"dropdown-toggle",
+			"VendorCSS-DEV",
+			"href=\"#",
+			"dropdown",
+			"PessoasMainCtrl",
+			"getToggleElement",
+			"toggled",
+			"teste",
+			"abreCadastroPessoaModal",
+			"salvar",
+			" '",
+			"modal-header",
+			"buscapesso",
+			"nomeModulo()",
+			"navbar-header",
+			"abreCadastroModalTarefa",
+			"selecionaProjeto(",
+			"abreCadastroPessoaModal",
+			">",
+			"Window resized",
+			"resize",
+			"{indexSelecao: index}",
+			", indexSelecao",
+			"[{nomeSelecao: ",
+			"[{nomeSelecao: 'painelPesquisaGruposAcordion',",
+			", index",
+			"index",
+			"('",
+			"toggleSelecao",
+			"/**",
+			"indexPeriodo",
+			"indexSetor",
+			"indexGrupo",
+			"setores = ",
+			"modalInstance",
+			"$",
+			"keypressHelper",
+			"ui.keypress",
+			"closeCheck",
+			"closeCheck()",
+			"modal.scope",
+			"controller",
+			"add(",
+			"add",
+			"$modal",
+			"closeCheck",
+			"$kdModalStack.dismiss",
+			"kdModalStack",
+			"dismiss",
+			"$modal",
+			"('$",
+			"$modalStack",
+			"{\n",
+			"'",
+			"$modalStack",
+			"modalStack",
+			"modalTransclude",
+			"modalWindow",
+			"backdrop.html",
+			"odalBackdrop",
+			"modalTransclude",
+			"modalBackdrop",
+			"stackedMap",
+			"'$$stackedMap",
+			"$$stackedMap",
+			"openedWindows",
+			"stackedMap",
+			"modalBackdrop"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"NgGridFlexibleHeightPlugin",
+			"''",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/raul/DevProjects/zidecohome-web"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Mac Classic (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.gulp_output":
+	{
+		"height": 135.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"form",
+				"app/modulopessoas/form-pessoal-2.html"
+			],
+			[
+				"pocpr",
+				"app/pocs/poc_principal.js"
+			],
+			[
+				"pocprin",
+				"app/pocs/poc_principal.js"
+			],
+			[
+				"tarefascon",
+				"app/modulotarefas/tarefas_controller.js"
+			],
+			[
+				"pessoacon",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"pessoacadastrocon",
+				"app/modulopessoas/pessoa_cadastro_controllers.js"
+			],
+			[
+				"configura",
+				"app/moduloconfiguracoes/configuracoes_controller.js"
+			],
+			[
+				"arquivo",
+				"app/moduloarquivo/arquivo_ctrl.js"
+			],
+			[
+				"agendap",
+				"app/moduloagenda/agendapesquisa.html"
+			],
+			[
+				"tarefasrepo",
+				"app/modulotarefas/tarefas_repo_services.js"
+			],
+			[
+				"agenda_contro",
+				"app/moduloagenda/agenda_controller.js"
+			],
+			[
+				"projetos_controller_pesquisa.js",
+				"app/moduloprojetos/projetos_controller_pesquisa.js"
+			],
+			[
+				"projeto_cont",
+				"app/moduloprojetos/projetos_controller_pesquisa.js"
+			],
+			[
+				"processoscontr",
+				"app/moduloprocessos/processos_controller.js"
+			],
+			[
+				"processoscon",
+				"coverage/Chrome 38.0.2125 (Linux)/app/moduloprocessos/processos_controller.js.html"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"tarefas",
+				"app/modulotarefas/tarefaspesquisa.html"
+			],
+			[
+				"tarefascont",
+				"app/modulotarefas/tarefas_controller.js"
+			],
+			[
+				"configu",
+				"app/moduloconfiguracoes/configuracoes_controller.js"
+			],
+			[
+				"poc_prin",
+				"app/pocs/poc_principal.js"
+			],
+			[
+				"pessoa_con",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"pessoaca",
+				"app/modulopessoas/pessoa_cadastro_controllers.js"
+			],
+			[
+				"processos",
+				"app/moduloprocessos/processospesquisa.html"
+			],
+			[
+				"pessoacadas",
+				"app/modulopessoas/pessoa-cadastro.html"
+			],
+			[
+				"layou",
+				"app/assets/style/app/_layoutareaconteudo.scss"
+			],
+			[
+				"forms.sc",
+				"app/assets/style/app/_forms.scss"
+			],
+			[
+				"app.sc",
+				"app/assets/style/app/app.scss"
+			],
+			[
+				"projetocadas",
+				"app/moduloprojetos/projetoscadastro.html"
+			],
+			[
+				"serv",
+				"app/modulopessoas/pessoa_services.js"
+			],
+			[
+				"pesso",
+				"app/modulopessoas/pessoa-painelpesquisa.html"
+			],
+			[
+				"pessoa",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"pessoa_repo",
+				"app/modulopessoas/pessoa_repo_services.js"
+			],
+			[
+				"app",
+				"app/app.js"
+			],
+			[
+				"pessoac",
+				"app/modulopessoas/pessoa_cadastro_controllers.js"
+			],
+			[
+				"karma",
+				"karma-testes.html"
+			],
+			[
+				"projetopesq",
+				"app/moduloprojetos/projetospesquisa.html"
+			],
+			[
+				"projet",
+				"app/moduloprojetos/projetospesquisa.html"
+			],
+			[
+				"state",
+				"app/main/statemain.html"
+			],
+			[
+				"projeto",
+				"app/moduloprojetos/projetospesquisa.html"
+			],
+			[
+				"poc",
+				"app/pocs/poc_dropdown.html"
+			],
+			[
+				"painelp",
+				"app/modulopessoas/pessoa-painelpesquisa.html"
+			],
+			[
+				"path",
+				"paths.js"
+			],
+			[
+				"stat",
+				"app/main/statemain.html"
+			],
+			[
+				"paths",
+				"paths.js"
+			],
+			[
+				"gul",
+				"gulpfile.js"
+			],
+			[
+				"statem",
+				"app/main/statemain.html"
+			],
+			[
+				"pat",
+				"paths.js"
+			],
+			[
+				"gulpe",
+				"gulpfile.js"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"ind",
+				"app/index.html"
+			],
+			[
+				"pessoali",
+				"app/modulopessoas/pessoa-lista.html"
+			],
+			[
+				"projetoma",
+				"app/moduloprojetos/projetomain.html"
+			],
+			[
+				"projetomain",
+				"app/moduloprojetos/projetomain.html"
+			],
+			[
+				"projetos",
+				"app/moduloprojetos/projetos_uistates.js"
+			],
+			[
+				"pessoapai",
+				"app/modulopessoas/pessoa-painelpesquisa.html"
+			],
+			[
+				"pessoare",
+				"app/modulopessoas/pessoa_repo_services.js"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				"app_ser",
+				"app/common/app_services.js"
+			],
+			[
+				"pessoaco",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"app_directives.js",
+				"app/common/app_directives.js"
+			],
+			[
+				"auxi",
+				"app/moduloconfiguracoes/tabauxiliares_repo_services.js"
+			],
+			[
+				"pessoarepo",
+				"app/modulopessoas/pessoa_repo_services.js"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"pessoaserv",
+				"app/modulopessoas/pessoa_services.js"
+			],
+			[
+				"pessoacadastro",
+				"app/modulopessoas/pessoa_cadastro_controllers.js"
+			],
+			[
+				"processos_controller.js",
+				"app/moduloprocessos/processos_controller.js"
+			],
+			[
+				"demanda_controller.js",
+				"app/modulodemandas/demanda_controller.js"
+			],
+			[
+				"tabauxiliares_repo_services.js",
+				"app/moduloconfiguracoes/tabauxiliares_repo_services.js"
+			],
+			[
+				"configuracoes_controller.js",
+				"app/moduloconfiguracoes/configuracoes_controller.js"
+			],
+			[
+				"poc_ui_calendar.js",
+				"app/pocs/poc_ui_calendar.js"
+			],
+			[
+				"poc_principal.js",
+				"app/pocs/poc_principal.js"
+			],
+			[
+				"fle",
+				"app/ng-grid-flexible-height.js"
+			],
+			[
+				"main_controller.js",
+				"app/main/main_controller.js"
+			],
+			[
+				"nggridplugins.js",
+				"app/common/nggridPlugins.js"
+			],
+			[
+				"app_services.js",
+				"app/common/app_services.js"
+			],
+			[
+				"ui-utils",
+				"bower_components/angular-ui-utils/ui-utils.js"
+			],
+			[
+				"pessoaser",
+				"app/modulopessoas/pessoa_repo_services.js"
+			],
+			[
+				"app.js",
+				"app/app.js"
+			],
+			[
+				"projetocadast",
+				"app/moduloprojetos/projetoscadastro.html"
+			],
+			[
+				"direc",
+				"app/common/app_directives.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"pessoareposer",
+				"app/modulopessoas/pessoa_repo_services.js"
+			],
+			[
+				"pess",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"grun",
+				"bower_components/restangular/Gruntfile.js"
+			],
+			[
+				"control",
+				"app/modulopessoas/pessoa_controller.js"
+			],
+			[
+				"pessao",
+				"app/modulopessoas/pessoa-painelpesquisa.html"
+			],
+			[
+				"setor",
+				"model/setorQueryMontador.js"
+			],
+			[
+				"app.s",
+				"app/assets/style/app/app.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 719.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 369.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

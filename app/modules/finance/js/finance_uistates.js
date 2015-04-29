@@ -4,20 +4,19 @@
 
 'use strict';
 
-var zidecoFinancasStates = angular.module('zideco.financas.uistates', ['ui.router']);
+angular.module('zideco.finance.uistates', ['ui.router'])
 
-
-zidecoFinancasStates.config(['$stateProvider', function ($stateProvider) {
+.config(['$stateProvider', function ($stateProvider) {
 
 
   $stateProvider
     .state('zideco.finance', {
       url: '/finance',
-      templateUrl: 'modulofinancas/financasmain.html',
+      templateUrl: 'modules/finance/views/finance_main.html',
           data: {
               moduleName: 'Finance'
           },
-      controller: 'financasCtrlMain'
+      controller: 'financeCtrlMain'
     })
 
 

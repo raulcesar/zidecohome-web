@@ -1,3 +1,4 @@
+'use strict';
 var zideco = angular.module('zideco',[
   'ui.router',
   'templates',
@@ -8,18 +9,18 @@ var zideco = angular.module('zideco',[
 //  'pascalprecht.translate',
 
   'zideco.filters',
-  'zideco.states',
+  'zideco.states.main',
   'zideco.envconfig',
   'zideco.services',
   'zideco.directives',
-  'zideco.states',
   'zideco.maincontrollers',
 
 
-  //Modulo principal do FINANCAS
-  'zideco.financas',
+  // Modules
+  'zideco.finance',
+  'zideco.hours',
   'zideco.pocs',
-  'btford.socket-io'
+  // 'btford.socket-io'
 
 ]);
 //  [

@@ -4,10 +4,10 @@
  */
 'use strict';
 
-var zidecoFinancasServices = angular.module('zideco.financas.reposervices', [])
-  .constant('version', '0.0.1');
+angular.module('zideco.finance.reposervices', [])
+  .constant('version', '0.0.1')
 
-zidecoFinancasServices.factory('contaResourceService', ['$http', '$q', '$log', '$location', 'Restangular', function ($http, $q, $log, $location, Restangular) {
+.factory('contaResourceService', ['$http', '$q', '$log', '$location', 'Restangular', function ($http, $q, $log, $location, Restangular) {
 
   var resource = 'contas';
 
@@ -33,7 +33,7 @@ zidecoFinancasServices.factory('contaResourceService', ['$http', '$q', '$log', '
   return {
     getContas:getContas,
     excluiContas:excluiConta,
-    insereConta:insereConta
+    incluiConta:incluiConta
   };
 
 

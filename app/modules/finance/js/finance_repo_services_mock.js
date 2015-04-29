@@ -6,10 +6,10 @@
  * Este arquivo implementa os servicoes de pessoas relativos a "repositorio" remoto com base em arquivos locais "mock".
  */
 'use strict';
-var zidecoFinancasServices = angular.module('zideco.financas.reposervices', [])
-  .constant('version', '0.0.1');
+angular.module('zideco.finance.reposervices', [])
+  .constant('version', '0.0.1')
 
-zidecoFinancasServices.factory('contaResourceService', ['$http', '$q', function ($http, $q) {
+.factory('contaResourceService', ['$http', '$q', function ($http, $q) {
   var getContas = function () {
     //Aqui vai a implementacao buscando de arquivo....
     var deferred = $q.defer();

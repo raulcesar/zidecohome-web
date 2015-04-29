@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="zideco">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>ZIDECO-HOME</title>
-
     <!--O trecho abaixo sera substituido pelo gulp para refletir as versoes minificadas e concatenadas das bibliotecas JS -->
     <!-- build:js -->
     <script src="../bower_components/ng-file-upload/angular-file-upload-html5-shim.js"></script>
-
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="../bower_components/datejs/build/date.js"></script>
     <script src="../bower_components/lodash/dist/lodash.js"></script>
     <script src="../bower_components/restangular/dist/restangular.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -21,65 +19,59 @@
     <script src="../bower_components/angular-gravatar/build/md5.js"></script>
     <script src="../bower_components/angular-webstorage/angular-webstorage.js"></script>
     <script src="../bower_components/ng-file-upload/angular-file-upload.js"></script>
-
-
-    <script src="../bower_components/socket.io-client/socket.io.js"></script>
+    <!--     <script src="../bower_components/socket.io-client/socket.io.js"></script>
     <script src="../bower_components/angular-socket-io/socket.js"></script>
-
-    <script src="../bower_components/angular-easyfb/angular-easyfb.js"></script>
-
-
-
+ -->
     <!--While UI-GRID is still unstable, lets control the version-->
     <!--TODO: When it becomes stable, we can revert to bower.-->
-    <!--<script src="assets/js/ui-grid.js"></script>-->
+    <!-- <script src="../bower_components/angular-ui-grid/ui-grid.js"></script> -->
     <script src="../bower_components/angular-ui-grid/ui-grid.js"></script>
-
-
     <script src="templates-dummy.js"></script>
-
     <script src="app.js"></script>
-    <script src="main/main_controller.js"></script>
+    <script src="main/js/main_controller.js"></script>
     <script src="common/app_directives.js"></script>
     <script src="common/app_filters.js"></script>
     <script src="common/app_service.js"></script>
-    <script src="main/ui-states.js"></script>
+    <script src="main/js/ui-states.js"></script>
     <script src="env/config-desenv.js"></script>
     <!--<script src="env/config-production.js"></script>-->
+    
 
-    <!--Modulo de Financas-->
-    <script src="modulofinancas/financas_principal.js"></script>
-    <script src="modulofinancas/financas_uistates.js"></script>
-    <script src="modulofinancas/financas_controllers.js"></script>
-
+    <!--Finance MODULE-->
+    <script src="modules/finance/js/finance_main.js"></script>
+    <script src="modules/finance/js/finance_uistates.js"></script>
+    <script src="modules/finance/js/finance_controllers.js"></script>
     <!--Abaixo, temos o arquivo que implementa buscando de arquivos locais.-->
-    <script src="modulofinancas/financas_repo_services_mock.js"></script>
+    <script src="modules/finance/js/finance_repo_services_mock.js"></script>
     <!--Abaixo, temos o arquivo que implementa buscando do banco.-->
-    <!--<script src="modulofinancas/financas_repo_services.js"></script>-->
+    <!--<script src="modules/finance/js/finance_repo_services.js"></script>-->
 
+    <!--Hours MODULE-->
+    <script src="modules/hours/js/hours_main.js"></script>
+    <script src="modules/hours/js/hours_uistates.js"></script>
+    <script src="modules/hours/js/hours_controllers.js"></script>
+    <script src="modules/hours/js/hours_repo_services.js"></script>
+
+
+
+    <!-- Using in POC -->
+    <script src="../bower_components/angular-easyfb/angular-easyfb.js"></script>
     <script src="pocs/poc_principal.js"></script>
     <script src="pocs/poc_ui_states.js"></script>
-
     <!-- endbuild -->
-
     <!--O trecho abaixo sera substituido pelo gulp para refletir as versoes minificadas e concatenadas das bibliotecas CSS -->
     <!-- build:css -->
     <link href="../build/lib.css" rel="stylesheet">
     <link href="../build/app.css" rel="stylesheet">
-
     <!--<link href="../build/external/bootstrap.css" rel="stylesheet">-->
     <!--<link href="../build/app.css" rel="stylesheet">-->
     <!-- endbuild -->
-
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
-
 </head>
-<body ng-cloak >
-<!--View principal da tela-->
-<div ui-view class="container mainContent"></div>
 
-
+<body ng-cloak>
+    <!--View principal da tela-->
+    <div ui-view class="container mainContent"></div>
 </body>
-
 
 </html>
