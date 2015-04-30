@@ -1,11 +1,11 @@
 <nav class="navbar navbar-zideco" role="navigation" ng-mouseleave="togglenavigationbar(false)">
   <!-- Current module and navigation togler -->
   <div class="navbar-header navbar-module-current">
-    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="Horas" ui-sref="zideco.hours"></a>
+    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="{{currentModule.title}}" ui-sref="zideco.hours"></a>
   </div>
   <!-- nav-items to zideco MODULES -->
   <div class="navbar-header navbar-modules" ng-class="{hidden: isnavbarhidden}">
-    <a class="fa icon-bar-image" ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="Horas" ui-sref="{{module.state}}">
+    <a class="fa icon-bar-image" ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="{{module.title}}" ui-sref="{{module.state}}">
     </a>
   </div>
   <ul class="navbar-header navbar-right nav">
@@ -15,25 +15,4 @@
   </ul>
 </nav>
 <!-- MAIN CONTENT -->
-<div class="row mainContent">
-  <div class="col-xs-12 ">
-    <div ui-view></div>
-  </div>
-</div>
-<!-- 
-<footer class="footer">
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-sm-6 text-left">
-                <p class="text-muted">Place sticky footer content here.</p>
-            </div>
-
-            <div class="col-sm-6 text-right">
-                <p>
-                    <small>{{'v. %VERSION% ' | interpolate}} &copy; zideco.org</small>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
- -->
+<div class="mainContent" ui-view></div>
