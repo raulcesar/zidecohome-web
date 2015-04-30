@@ -25,6 +25,7 @@ angular.module('zideco.finance.reposervices', [])
   };
 
   var incluiConta = function(conta) {
+    console.log('conta: ' + conta);
 
   };
 

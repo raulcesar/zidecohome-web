@@ -4,10 +4,10 @@
 
 'use strict';
 
-angular.module('zideco.finance.uistates', ['ui.router'])
+angular.module('zideco.finance.uistates', ['ui.router', 'zideco.services'])
 
-.config(['$stateProvider', function ($stateProvider) {
-
+.config(['$stateProvider', 'ZModuleserviceProvider', function ($stateProvider, ZModuleserviceProvider) {
+  ZModuleserviceProvider.registerStateToModuleRelation('zideco.finance', 'finance');
 
   $stateProvider
     .state('zideco.finance', {

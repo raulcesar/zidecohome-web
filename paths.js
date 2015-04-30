@@ -6,6 +6,7 @@ var paths = {
     index: ['./app/index.html', './app/test.html' ],
 
     scripts: [
+        '!./app/scratch/**/*',
         '!./app/**/*_test.js',
         '!./app/**/*_spec.js',
         '!./app/**/*Spec.js',

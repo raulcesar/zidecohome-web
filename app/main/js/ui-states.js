@@ -1,14 +1,16 @@
 /**
  * Created by raul on 29/04/14.
  */
-angular.module('zideco.states.main', [])
+ 'use strict';
+angular.module('zideco.states.main', ['zideco.services'])
 
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-    'use strict';
+.config(['$stateProvider', '$urlRouterProvider', 'ZModuleserviceProvider', function($stateProvider, $urlRouterProvider, ZModuleserviceProvider) {
+    // var ZModuleservice = ZModuleserviceProvider.$get[1]();
+    // ZModuleservice.registerStateToModuleRelation('zideco.landing', 'landing');
+    ZModuleserviceProvider.registerStateToModuleRelation('zideco.landing', 'landing');
 
     //By default, redirect to landing page.
     $urlRouterProvider.otherwise('/zideco/landing');
-    // $urlRouterProvider.otherwise('/zideco');
 
 
     $stateProvider
@@ -17,7 +19,8 @@ angular.module('zideco.states.main', [])
         url: '/zideco',
         abstract: true,
         // template: '<ui-view/>'
-        templateUrl: 'main/views/statemain.html'
+        templateUrl: 'main/views/statemain.html',
+        controller: 'mainCtrl'
 
     })
 

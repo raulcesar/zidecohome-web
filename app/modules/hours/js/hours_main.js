@@ -8,6 +8,7 @@ angular.module('zideco.hours', [
 ])
 
 .controller('hoursCtrlMain', ['$scope', function ($scope) {
+	$scope.hello = 'hello';
 //     //Por enquanto nada aqui...
 //     $scope.lang = 'pt-br';
 //     $scope.gridOptions = {

@@ -1,5 +1,5 @@
 {
-  "predef": ["angular", "_", "window", "TagCanvas"],
+  "predef": ["angular", "_", "window", "io"],
   "node": true,
   "esnext": true,
   "bitwise": true,

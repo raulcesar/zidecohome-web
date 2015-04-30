@@ -12,23 +12,23 @@ var concat = require('gulp-concat-sourcemap');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var stylish = require('jshint-stylish');
-var protractor = require("gulp-protractor").protractor;
+var protractor = require('gulp-protractor').protractor;
 var paths = require('./paths');
 var rimraf = require('rimraf');
 
 var logCapture = require('gulp-log-capture');
-var os = require("os");
+var os = require('os');
 
 function buildVersionString() {
     var jenkinsTag = process.env.BUILD_TAG;
     if (!jenkinsTag || jenkinsTag === '') {
         var hoje = new Date();
-        var day = ("00" + hoje.getUTCDate()).slice (-2);
-        var month = ("00" + (hoje.getUTCMonth() + 1)).slice (-2);
-        var year = ("0000" + hoje.getUTCFullYear()).slice (-4);
-        var hour = ("00" + hoje.getUTCHours()).slice (-2);
-        var minute = ("00" + hoje.getUTCMinutes()).slice (-2);
-        var second = ("00" + hoje.getUTCSeconds()).slice (-2);
+        var day = ('00' + hoje.getUTCDate()).slice (-2);
+        var month = ('00' + (hoje.getUTCMonth() + 1)).slice (-2);
+        var year = ('0000' + hoje.getUTCFullYear()).slice (-4);
+        var hour = ('00' + hoje.getUTCHours()).slice (-2);
+        var minute = ('00' + hoje.getUTCMinutes()).slice (-2);
+        var second = ('00' + hoje.getUTCSeconds()).slice (-2);
 
 
         jenkinsTag = os.hostname() + '-UTC-' + year + '-' + month + '-' + day + '_' + hour + ':' + minute + ':' + second;
@@ -56,11 +56,11 @@ gulp.task('cleanE2eReports', function () {
 gulp.task('e2e', ['cleanE2eReports'], function () {
     gulp.src([paths.testes.e2e])
         .pipe(protractor({
-            configFile: "protractor-conf.js"
+            configFile: 'protractor-conf.js'
 //    ,    args: ['--baseUrl', 'http://127.0.0.1:8000']
         }))
         .on('error', function (e) {
-            throw e
+            throw e;
         });
 });
 
@@ -249,9 +249,9 @@ gulp.task('watchMock', function () {
 var fileWritingReporter = map(function (file, cb) {
     if (!file.jshint.success) {
         var fs = require('fs');
-        var originalFileName = file.path.split("/").splice(-1)[0];
-        var logFileDir = "./linterrorlog";
-        var logFileName = logFileDir + "/errors_" + originalFileName + ".txt";
+        var originalFileName = file.path.split('/').splice(-1)[0];
+        var logFileDir = './linterrorlog';
+        var logFileName = logFileDir + '/errors_' + originalFileName + '.txt';
 
         //Cria diretorio se nao exitir.
         if (!fs.existsSync(logFileDir)) {

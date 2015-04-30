@@ -1,31 +1,25 @@
-<nav class="navbar navbar-zideco" role="navigation">
-    <div class="navbar-header">
-        <!-- Today just the name... -->
+<nav class="navbar navbar-zideco" role="navigation" ng-mouseleave="togglenavigationbar(false)">
+
+
+<!--     <div class="navbar-header">
         <a class="navbar-brand" ui-sref="zideco.landing">Zideco</a>
-        <!-- Futuramente, aqui seria o modulo ativo! -->
     </div>
-
-
-    <!-- TODO: Futuramente aqui seria os "invisíveis" -->
-    <div class="navbar-header navbar-right ">
-
-        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
-            <a class="icon-bar-image fa fa-clock-o" href="" title="Horas" ui-sref="zideco.hours"></a>
+ -->
+    <!-- Current module and navigation togler -->
+    <div class="navbar-header">
+        <div class="navitem-current">
+            <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="Horas" 
+            ui-sref="zideco.hours">
+            </a>
         </div>
-
-        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
-            <a class="icon-bar-image fa fa-dollar" href="" title="Finance"  ui-sref="zideco.finance"></a>
-        </div>
-
-        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
-            <a class="icon-bar-image fa fa-cogs" href="" title="Configurações do Sistema"></a>
-        </div>
-
-        <div class="navbar-header"  is-open="navbarmenus.modules.navisopen">
-            <a class="icon-bar-image fa fa-user" href="" title="{{user.username}} ({{user.emailCamara}}"></a>
-        </div>
-
-
+    </div>
+    
+    <!-- nav-items to zideco MODULES -->
+    <div class="navbar-header" ng-class="{hidden: isnavbarhidden}">
+        <!-- <div class="navitem-hidden" ng-repeat="module in modules"> -->
+        <a class="fa icon-bar-image"  ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="Horas" ui-sref="{{module.state}}" ></a>
+        <!-- ng-click="makeModuleCurrent(name)" -->
+        <!-- </div> -->
     </div>
 </nav>
 
@@ -42,11 +36,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
 <!-- 
 <footer class="footer">
     <div class="container-fluid">

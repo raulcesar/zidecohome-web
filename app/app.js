@@ -1,12 +1,12 @@
 'use strict';
-var zideco = angular.module('zideco',[
+angular.module('zideco', [
   'ui.router',
   'templates',
   'ui.bootstrap',
   'ui.gravatar',
   'restangular',
   'webStorageModule',
-//  'pascalprecht.translate',
+  //  'pascalprecht.translate',
 
   'zideco.filters',
   'zideco.states.main',
@@ -22,68 +22,69 @@ var zideco = angular.module('zideco',[
   'zideco.pocs',
   // 'btford.socket-io'
 
-]);
-//  [
-//
-////
-//
-//
-//
-//]);
+])
 
-zideco.run(
-  [        '$rootScope', '$state', '$stateParams', 'LASTURL',
-    function ($rootScope,   $state,   $stateParams, LASTURL) {
+.run(['$rootScope', '$state', '$stateParams', 'LASTURL', 'ZModuleservice',
+  function($rootScope, $state, $stateParams, LASTURL, ZModuleservice) {
 
-      // It's very handy to add references to $state and $stateParams to the $rootScope
-      // so that you can access them from any scope within your applications.For example,
-      // <li ui-sref-active="active }"> will set the <li> // to active whenever
-      // 'contacts.list' or one of its decendents is active.
-      $rootScope.$state = $state;
-      $rootScope.$stateParams = $stateParams;
-
-      //Aqui vou armazenar o "ultimo" estado. No interceptor, eu incluo informacao de erro (caso aja)
-      //Então, abaixo, posso verificar esta informação e se houver, eu sei que devo redirecionar para o "ultimo" após o erro.
-      $rootScope.$on('$stateChangeStart',
-        function(event, toState, toParams, fromState, fromParams){
-          var lastUrl = LASTURL.getLasturl()
-          if (lastUrl && lastUrl.err && lastUrl.state) {
-            LASTURL.clearLastUrl();
-            //Redirect to lasturl.
-            event.preventDefault();
-            $state.transitionTo(lastUrl.state)
-          }
+    // It's very handy to add references to $state and $stateParams to the $rootScope
+    // so that you can access them from any scope within your applications.For example,
+    // <li ui-sref-active="active }"> will set the <li> // to active whenever
+    // 'contacts.list' or one of its decendents is active.
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
 
 
-          LASTURL.setLasturl({state: toState.name});
-        })
 
-    }]);
+    //Here we store the "last" state. No interceptor, eu incluo informacao de erro (caso aja)
+    //Então, abaixo, posso verificar esta informação e se houver, eu sei que devo redirecionar para o "ultimo" após o erro.
+    $rootScope.$on('$stateChangeStart',
+      //Full signature: event, toState, toParams, fromState, fromParams
+      function(event, toState) {
+
+        var lastUrl = LASTURL.getLasturl();
+        if (lastUrl && lastUrl.err && lastUrl.state) {
+          LASTURL.clearLastUrl();
+          //Redirect to lasturl.
+          event.preventDefault();
+          $state.transitionTo(lastUrl.state);
+        }
+
+        LASTURL.setLasturl({
+          state: toState.name
+        });
+      });
+
+    $rootScope.$on('$stateChangeSuccess',
+      //Full signature: event, toState, toParams, fromState, fromParams
+      function(event, toState) {
+        ZModuleservice.setCurrentModule(toState.name);
+      });
+
+
+  }
+])
 
 //Configuração do RESTANGULAR;
-zideco.config(['RestangularProvider', 'CONFIG', function (RestangularProvider, CONFIG) {
+.config(['RestangularProvider', 'CONFIG', function(RestangularProvider, CONFIG) {
   RestangularProvider.setBaseUrl(CONFIG.RestangularBaseUrl);
-}]);
+}])
 
 
 
 //Configuração do servico de HTTP
-zideco.config(['$httpProvider', function($httpProvider) {
+.config(['$httpProvider', function($httpProvider) {
   $httpProvider.defaults.withCredentials = true;
   $httpProvider.defaults.useXDomain = true;
-}]);
+}])
 
 
-zideco.config(['$httpProvider', function($httpProvider) {
-  //Inlcui interceptores aqui. Eles são definidos no moldulo de servico (service)
-//  $httpProvider.interceptors.push('Interceptors');
-}]
-);
-
-
-
+// .config(['$httpProvider', function($httpProvider) {
+//   //Inlcui interceptores aqui. Eles são definidos no moldulo de servico (service)
+//   //  $httpProvider.interceptors.push('Interceptors');
+// }])
 //
-//kd.config(['gravatarServiceProvider', function(gravatarServiceProvider) {
+//.config(['gravatarServiceProvider', function(gravatarServiceProvider) {
 //        gravatarServiceProvider.defaults = {
 //            'size'    : 32,
 //            'default' : 'mm'  // Mystery man as default for missing avatars
@@ -92,6 +93,6 @@ zideco.config(['$httpProvider', function($httpProvider) {
 //        // Use https endpoint
 //        gravatarServiceProvider.secure = true;
 //    }
-//]);
+//])
 
-
+;

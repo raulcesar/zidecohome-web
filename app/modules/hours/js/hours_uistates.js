@@ -4,10 +4,10 @@
 
 'use strict';
 
-angular.module('zideco.hours.uistates', ['ui.router'])
+angular.module('zideco.hours.uistates', ['ui.router', 'zideco.services'])
 
-.config(['$stateProvider', function($stateProvider) {
-
+.config(['$stateProvider', 'ZModuleserviceProvider', function($stateProvider, ZModuleserviceProvider) {
+    ZModuleserviceProvider.registerStateToModuleRelation('zideco.hours', 'hours');
 
     $stateProvider
         .state('zideco.hours', {
