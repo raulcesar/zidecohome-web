@@ -89,13 +89,10 @@ angular.module('zideco.services', [])
 
     //This function sets the current module and emits an event to indicate the change.
     var setCurrentModule = function(state) {
-      console.log('current state: ' + state);
       var newCurrentModule = _stateToModuleMap[state];
 
       if (_currentModule !== newCurrentModule) {
         _currentModule = newCurrentModule;
-        console.log('Broadcasting event for new module...' + JSON.stringify(_currentModule));
-
         $rootScope.$broadcast(_events.evtCurrentModuleChanged, _currentModule);
       }
     };

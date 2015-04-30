@@ -1,40 +1,24 @@
 <nav class="navbar navbar-zideco" role="navigation" ng-mouseleave="togglenavigationbar(false)">
-
-
-<!--     <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="zideco.landing">Zideco</a>
-    </div>
- -->
-    <!-- Current module and navigation togler -->
-    <div class="navbar-header">
-        <div class="navitem-current">
-            <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="Horas" 
-            ui-sref="zideco.hours">
-            </a>
-        </div>
-    </div>
-    
-    <!-- nav-items to zideco MODULES -->
-    <div class="navbar-header" ng-class="{hidden: isnavbarhidden}">
-        <!-- <div class="navitem-hidden" ng-repeat="module in modules"> -->
-        <a class="fa icon-bar-image"  ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="Horas" ui-sref="{{module.state}}" ></a>
-        <!-- ng-click="makeModuleCurrent(name)" -->
-        <!-- </div> -->
-    </div>
+  <!-- Current module and navigation togler -->
+  <div class="navbar-header navbar-module-current">
+    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="Horas" ui-sref="zideco.hours"></a>
+  </div>
+  <!-- nav-items to zideco MODULES -->
+  <div class="navbar-header navbar-modules" ng-class="{hidden: isnavbarhidden}">
+    <a class="fa icon-bar-image" ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="Horas" ui-sref="{{module.state}}">
+    </a>
+  </div>
+  <ul class="navbar-header navbar-right nav">
+    <li>$state = {{$state.current.name}}</li>
+    <li>$stateParams = {{$stateParams}}</li>
+    <li>$state full url = {{ $state.$current.url.source }}</li>
+  </ul>
 </nav>
-
 <!-- MAIN CONTENT -->
-<div id="mainContent" class="col-xs-12 mainContent">
-    <div class="row">
-        <div class="col-xs-12 col-md-10 panel-module ">
-            <div ui-view class="container zero-padding"></div>
-        </div>
-        <div class="col-xs-12 col-md-2 panel-info">
-            <p>$state = {{$state.current.name}}</p>
-            <p>$stateParams = {{$stateParams}}</p>
-            <p>$state full url = {{ $state.$current.url.source }}</p>
-        </div>
-    </div>
+<div class="row mainContent">
+  <div class="col-xs-12 ">
+    <div ui-view></div>
+  </div>
 </div>
 <!-- 
 <footer class="footer">

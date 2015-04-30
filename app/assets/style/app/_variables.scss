@@ -23,12 +23,21 @@ $color-complement-3: #D50040;
 $color-complement-4: #E50045;
 
 
-$background-geral: #384b65;
+$background-geral: #FFFFFF;
+
+//dark: #384b65;
+
+
+
 $background-destaque: $background-geral;
 
-$main-textcolor: #ffffff;
+// $main-textcolor: #3c80f6;
 
-$navbar-background: $background-geral;
+$navbar-textcolor: #ffffff;
+$navitem-background-color: #3c80f6;
+$navitem-inactivemodules-background-color: #db4437;
+
+$navbar-background: #FFFFFF;
 $navbar-dropdownmenu-backgroundcolor: #FFFFFF;
 $navbar-dropdownmenu-color: #454545;
 //$navbar-dropdownmenu-backgroundcolor: #454545;
