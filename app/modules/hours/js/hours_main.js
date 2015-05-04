@@ -4,21 +4,7 @@
 'use strict';
 angular.module('zideco.hours', [
     'zideco.hours.uistates',
-    'zideco.hours.reposervices'
-])
+    'zideco.hours.reposervices',
+    'zideco.hourscontrollers'
+]);
 
-.controller('hoursCtrlMain', ['$scope', function ($scope) {
-	$scope.hello = 'hello';
-//     //Por enquanto nada aqui...
-//     $scope.lang = 'pt-br';
-//     $scope.gridOptions = {
-//         data: [
-//             {name: 'raul', ponto: '6486'},
-//             {name: 'faa', ponto: 'foo'},
-//             {name: 'fee', ponto: 'fi'},
-//             {name: 'fo', ponto: 'fum'},
-//         ]
-//     };
-
-
-}]);

@@ -1,7 +1,11 @@
-
 <!-- summary bar -->
 <div class="col-xs-12">
-	<h1>Summary bar</h1>
+  <h1>Summary bar</h1>
 </div>
-
 <!-- Calendar -->
+<div class="col-xs-12">
+  <h1>Calendar:</h1>
+  <!-- <div ng-controller="hoursCtrlMain"> -->
+    <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources" calendar="calendario"> </div>
+  <!-- </div> -->
+</div>

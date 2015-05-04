@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"mainContent"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"current",
+				"currentModule"
+			],
+			[
+				"new",
+				"newCurrentModule"
+			],
+			[
+				"mode",
+				"modules"
+			],
+			[
 				"funcse",
 				"funcSelecionaArquivo"
 			],
@@ -18,10 +50,6 @@
 			[
 				"salv",
 				"salvarPessoa"
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"bo",
@@ -116,10 +144,34 @@
 	"buffers":
 	[
 		{
-			"file": "gulpfile.js",
+			"file": "app/modules/hours/views/hours_main.html",
 			"settings":
 			{
-				"buffer_size": 9755,
+				"buffer_size": 328,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 4025,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/modules/hours/js/hours_controllers.js",
+			"settings":
+			{
+				"buffer_size": 1849,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/modules/hours/js/hours_uistates.js",
+			"settings":
+			{
+				"buffer_size": 782,
 				"line_ending": "Unix"
 			}
 		}
@@ -131,10 +183,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 312.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "col",
 		"selected_items":
 		[
+			[
+				"col",
+				"Color Picker"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
 			[
 				"form",
 				"CodeFormatter: Format Code"
@@ -447,10 +511,100 @@
 	},
 	"expanded_folders":
 	[
-		"/home/raul/DevProjects/zidecohome-web"
+		"/home/raul/DevProjects/zidecohome-web",
+		"/home/raul/DevProjects/zidecohome-web/app",
+		"/home/raul/DevProjects/zidecohome-web/app/assets",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app",
+		"/home/raul/DevProjects/zidecohome-web/app/common",
+		"/home/raul/DevProjects/zidecohome-web/app/main",
+		"/home/raul/DevProjects/zidecohome-web/app/main/js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/views",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/views",
+		"/home/raul/DevProjects/zidecohome-web/app/scratch/release",
+		"/home/raul/DevProjects/zidecohome-web/bower_components",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/angular-ui-calendar/src",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/jquery",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/jquery/dist",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/moment"
 	],
 	"file_history":
 	[
+		"/home/raul/DevProjects/zidecohome-web/app/index.html",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js/hours_main.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/js/main_controller.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js/finance_controllers.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/views/finance_main.html",
+		"/home/raul/DevProjects/zidecohome-web/paths.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/views/statemain.html",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/gulp-log-capture/node_modules/stack-trace/lib/stack-trace.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/protractor/node_modules/selenium-webdriver/test/stale_element_test.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/gulp-minify-css/node_modules/gulp-util/node_modules/minimist/test/stop_early.js",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_variables.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/app.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_navbar.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/common/app_service.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/secnotes/placeholder.txt",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/karma/lib/init/state_machine.js",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/angular-ui-router/src/state.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/protractor-html-screenshot-reporter/examples/screenshots/29-Apr-2014-11h-35m/chrome/should list todos-todo list-angularjs homepage.json",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/angular-socket-io/socket.js",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_comentado.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_misc.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_debugging.scss",
+		"/home/raul/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/home/raul/DevProjects/zidecohome-web/app/app.js",
+		"/home/raul/DevProjects/zidecohome-web/.jshintrc",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_finance_repo_services.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js/finance_repo_services.js",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_hours_main.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_hours_repo_services.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/gulpfile.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/scrolling_tests/page_with_double_overflow_auto.html",
+		"/home/raul/DevProjects/zidecohome-web/app/scratch/purehtmlfile.html",
+		"/home/raul/DevProjects/zidecohome-web/app/scratch/release/ui-grid-unstable.min.js",
+		"/home/raul/DevProjects/zidecohome-web/app/scratch/release/ui-grid-unstable.min.css",
+		"/home/raul/DevProjects/zidecohome-web/app/pocs/poc-uigrid.html",
+		"/home/raul/DevProjects/zidecohome-web/build/ui-grid.svg",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_ui-grid-unstable.min.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js/hours_repo_services.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js/hours_controllers.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js/hours_uistates.js",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/jquery/src/var/hasOwn.js",
+		"/home/raul/DevProjects/zidecohome-web/sketch/HorasModule.bmml",
+		"/home/raul/DevProjects/zidecohome-web/bower_components/socket.io-client/History.md",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/protractor-html-screenshot-reporter/examples/screenshots/29-Apr-2014-11h-35m/chrome/should add a todo-todo list-angularjs homepage.json",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/protractor-html-screenshot-reporter/examples/screenshots/29-Apr-2014-11h-35m/chrome/should greet the named user-angularjs homepage.json",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/gulp-html-replace/node_modules/through2/node_modules/readable-stream/lib/_stream_writable.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/gulp-html-replace/node_modules/through2/node_modules/readable-stream/lib/_stream_passthrough.js",
+		"/home/raul/DevProjects/zidecohome-web/node_modules/gulp-html-replace/node_modules/through2/node_modules/readable-stream/lib/_stream_duplex.js",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_app_service.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js/finance_uistates.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/views/landingpage.html",
+		"/home/raul/DevProjects/zidecohome-web/linterrorlog/errors_angular-locale_pt-br.js.txt",
+		"/home/raul/DevProjects/zidecohome-web/app/i18n/angular-locale_pt-br.js",
+		"/home/raul/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/raul/DevProjects/zidecohome-web/app/main/js/ui-states.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/js/main_services.js",
+		"/home/raul/DevProjects/zidecohome-web/app/favicon.ico",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/views/hours_main.html",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js/finance_repo_services_mock.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js/finance_principal.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/js/finance_repo_services_mock.js",
+		"/home/raul/DevProjects/zidecohome-web/package.json",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/financas_uistates.js",
+		"/home/raul/DevProjects/zidecohome-web/app/modules/finance/views/financasmain.html",
+		"/home/raul/DevProjects/zidecohome-web/app/modulofinancas/financasmain.html",
+		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app/_raul.scss",
+		"/home/raul/DevProjects/zidecohome-web/app/pocs/poc_principal.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/ui-states.js",
+		"/home/raul/DevProjects/zidecohome-web/app/main/statemain.html",
+		"/home/raul/DevProjects/zidecohome-web/app/main/main_controller.js",
+		"/home/raul/DevProjects/zidecohome-web/app/common/nggridPlugins.js",
 		"/home/raul/DevProjects/zidecohome-web/Gruntfile.js",
 		"/home/raul/DevProjects/zidecohome-api/package.json",
 		"/home/raul/DevProjects/zidecohome-api/zidecoseq/wrappers.js",
@@ -507,88 +661,20 @@
 		"/home/raul/DevProjects/cedi/kd-frontend/app/common/app_services.js",
 		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_layoutareaconteudo.scss",
 		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processoscadastro.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/index.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefascadastro.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulotarefas/tarefamain.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloconfiguracoes/tabauxiliares_repo_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloarquivo/arquivomain.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloarquivo/arquivo.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/i18n/ar-QA.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloagenda/agenda_repo_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_repo_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/jquery/src/effects.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/linterrorlog/errors_pessoa_controller.js.txt",
-		"/home/raul/DevProjects/cedi/kd-frontend/lint-reports/pessoa_cadastro_controllers-jslint_xml-log.xml",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processos_uistates.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprocessos/processos_repo_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc-fileupload.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_FormDadosPrincipaisCtrlSpec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetoscadastro.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/form-pessoal.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/fullcalendar/dist/lang-all.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/angular-gravatar/LICENSE",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/moment/locale/fo.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/app.scss",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/forstudy/ServicosCedi.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/jquery/src/serialize.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/model/Setor.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/main/statemain.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_navbar.scss",
-		"/home/raul/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/raul/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa-lista.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoamain.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/e2e/pesquisaScenario.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_principal.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetos_repo_services.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_ModalInstanceCtrlSpec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/karma-testes.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/pessoa_controller_semgrid.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_PessoasPesquisaCtrlSpec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/testes/unit/appSpec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/unit/pessoa_PessoaModelSpec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/modulopessoas/testes/e2e/pages/PessoaMainPagina.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/common/app_filters.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/env/config-production.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/main/testes/unit/main_controller_spec.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/main/main_controller.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/main/main_ui_states.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/images/kd_adicionar_tarefas_rapido.svg",
-		"/home/raul/.config/sublime-text-3/Packages/CSS Extended Completions/css_style_completions.sublime-settings",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/_debugging.scss",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/app/test.css",
-		"/home/raul/.config/sublime-text-3/Packages/User/css_style_completions.sublime-settings",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/pocs.html",
-		"/home/raul/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf-isolated.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/gulpfile.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/external/bootstrap.css",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/i18n/pa-IN.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/datejs/build/production/i18n/en-AU.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/karma.conf.jenkins.js",
-		"/home/raul/Downloads/bootstrap-sass-3.3.1/bower.json",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_dropdown_ctrl.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_ui_states.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/build/lib.css",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style/external/bootstrap/_component-animations.scss",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/pocs/poc_ui_calendar.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower.json",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetos_uistates.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/projetomain.html",
-		"/home/raul/DevProjects/cedi/kd-frontend/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
-		"/home/raul/DevProjects/cedi/kd-frontend/app/moduloprojetos/testes/e2e/pages/ProjetoMainPagina.js"
+		"/home/raul/DevProjects/cedi/kd-frontend/app/index.html"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
 		"height": 96.0,
 		"where_history":
 		[
+			"/home/raul/DevProjects/zidecohome-web/app",
+			"/home/raul/DevProjects/zidecohome-web/app/main",
+			"/home/raul/DevProjects/zidecohome-web/app",
 			"/home/raul/DevProjects/cedi/kd-frontend/app",
 			"/home/raul/DevProjects/cedi/kd-frontend/app/assets/style",
 			"/home/raul/DevProjects/cedi/kd-frontend/app",
@@ -600,6 +686,38 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gcal",
+			"]);\n",
+			"\"bower_components/",
+			"type=\"text/javascript\" ",
+			"p>",
+			"P",
+			"p",
+			"nav",
+			"\" ",
+			"icon-bar-image",
+			"<.....>",
+			"\"",
+			"'",
+			"\"",
+			"zideco.",
+			": {",
+			"\"indent_size\": 4",
+			"4",
+			"\"",
+			"finance",
+			"financas",
+			"finance/",
+			"financas_",
+			"modulofinancas",
+			" \"",
+			"dropdown",
+			"dropdown-toggle",
+			"dropdown",
+			"moduleinfobar",
+			"container",
+			"ezfb",
+			"zidecoServices",
 			"'",
 			"attributes",
 			"define",
@@ -695,39 +813,7 @@
 			"indexGrupo",
 			"setores = ",
 			"modalInstance",
-			"$",
-			"keypressHelper",
-			"ui.keypress",
-			"closeCheck",
-			"closeCheck()",
-			"modal.scope",
-			"controller",
-			"add(",
-			"add",
-			"$modal",
-			"closeCheck",
-			"$kdModalStack.dismiss",
-			"kdModalStack",
-			"dismiss",
-			"$modal",
-			"('$",
-			"$modalStack",
-			"{\n",
-			"'",
-			"$modalStack",
-			"modalStack",
-			"modalTransclude",
-			"modalWindow",
-			"backdrop.html",
-			"odalBackdrop",
-			"modalTransclude",
-			"modalBackdrop",
-			"stackedMap",
-			"'$$stackedMap",
-			"$$stackedMap",
-			"openedWindows",
-			"stackedMap",
-			"modalBackdrop"
+			"$"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -759,19 +845,143 @@
 			[
 				{
 					"buffer": 0,
-					"file": "gulpfile.js",
+					"file": "app/modules/hours/views/hours_main.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9755,
+						"buffer_size": 328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Mac Classic (SL).tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4025,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								431,
+								431
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Mac Classic (SL).tmTheme",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/modules/hours/js/hours_controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Mac Classic (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/modules/hours/js/hours_uistates.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								570,
+								570
 							]
 						],
 						"settings":
@@ -796,7 +1006,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -861,6 +1071,50 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"path",
+				"paths.js"
+			],
+			[
+				"stateman",
+				"app/main/views/statemain.html"
+			],
+			[
+				"statem",
+				"app/main/views/statemain.html"
+			],
+			[
+				"paths",
+				"paths.js"
+			],
+			[
+				"uigridun",
+				"app/scratch/release/ui-grid-unstable.min.js"
+			],
+			[
+				"hours_repo_services.js",
+				"app/modules/hours/js/hours_repo_services.js"
+			],
+			[
+				"hoursmain",
+				"app/modules/hours/js/hours_main.js"
+			],
+			[
+				"finance_repo_services.js",
+				"app/modules/finance/js/finance_repo_services.js"
+			],
+			[
+				"app_service.js",
+				"app/common/app_service.js"
+			],
+			[
+				"angular-locale_pt-br.js",
+				"app/i18n/angular-locale_pt-br.js"
+			],
 			[
 				"pack",
 				"package.json"
@@ -932,10 +1186,6 @@
 			[
 				"processoscon",
 				"coverage/Chrome 38.0.2125 (Linux)/app/moduloprocessos/processos_controller.js.html"
-			],
-			[
-				"index",
-				"app/index.html"
 			],
 			[
 				"tarefas",
@@ -1038,24 +1288,12 @@
 				"app/modulopessoas/pessoa-painelpesquisa.html"
 			],
 			[
-				"path",
-				"paths.js"
-			],
-			[
 				"stat",
 				"app/main/statemain.html"
 			],
 			[
-				"paths",
-				"paths.js"
-			],
-			[
 				"gul",
 				"gulpfile.js"
-			],
-			[
-				"statem",
-				"app/main/statemain.html"
 			],
 			[
 				"pat",
@@ -1254,7 +1492,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 369.0,
+	"side_bar_width": 537.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
