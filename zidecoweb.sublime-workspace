@@ -514,7 +514,6 @@
 		"/home/raul/DevProjects/zidecohome-web",
 		"/home/raul/DevProjects/zidecohome-web/app",
 		"/home/raul/DevProjects/zidecohome-web/app/assets",
-		"/home/raul/DevProjects/zidecohome-web/app/assets/style/app",
 		"/home/raul/DevProjects/zidecohome-web/app/common",
 		"/home/raul/DevProjects/zidecohome-web/app/main",
 		"/home/raul/DevProjects/zidecohome-web/app/main/js",
@@ -525,9 +524,7 @@
 		"/home/raul/DevProjects/zidecohome-web/app/modules/hours",
 		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/js",
 		"/home/raul/DevProjects/zidecohome-web/app/modules/hours/views",
-		"/home/raul/DevProjects/zidecohome-web/app/scratch/release",
 		"/home/raul/DevProjects/zidecohome-web/bower_components",
-		"/home/raul/DevProjects/zidecohome-web/bower_components/angular-ui-calendar/src",
 		"/home/raul/DevProjects/zidecohome-web/bower_components/jquery",
 		"/home/raul/DevProjects/zidecohome-web/bower_components/jquery/dist",
 		"/home/raul/DevProjects/zidecohome-web/bower_components/moment"
@@ -856,8 +853,8 @@
 						"selection":
 						[
 							[
-								320,
-								320
+								328,
+								328
 							]
 						],
 						"settings":
@@ -866,6 +863,10 @@
 							[
 								{
 									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
@@ -907,6 +908,10 @@
 							[
 								{
 									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
@@ -955,10 +960,16 @@
 								{
 									"characters": ".#",
 									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
 								}
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Mac Classic (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -990,6 +1001,10 @@
 							[
 								{
 									"characters": "<",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
 									"selector": "text.html"
 								},
 								{
