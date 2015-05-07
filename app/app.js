@@ -5,7 +5,6 @@ angular.module('zideco', [
   'ui.bootstrap',
   'ui.gravatar',
   'restangular',
-  'webStorageModule',
   //  'pascalprecht.translate',
 
   'zideco.filters',
@@ -42,7 +41,7 @@ angular.module('zideco', [
       //Full signature: event, toState, toParams, fromState, fromParams
       function(event, toState) {
 
-        var lastUrl = LASTURL.getLasturl();
+        var lastUrl = LASTURL.getLastUrl();
         if (lastUrl && lastUrl.err && lastUrl.state) {
           LASTURL.clearLastUrl();
           //Redirect to lasturl.
@@ -50,7 +49,7 @@ angular.module('zideco', [
           $state.transitionTo(lastUrl.state);
         }
 
-        LASTURL.setLasturl({
+        LASTURL.setLastUrl({
           state: toState.name
         });
       });
@@ -64,6 +63,15 @@ angular.module('zideco', [
 
   }
 ])
+
+.config(function (localStorageServiceProvider) {
+  //Vamos usar localStorage para permitir compartilhamento entre abas.
+  localStorageServiceProvider
+    .setPrefix('ziw')
+    .setStorageType('localStorage')
+    .setNotify(true, true);
+})
+
 
 //Configuração do RESTANGULAR;
 .config(['RestangularProvider', 'CONFIG', function(RestangularProvider, CONFIG) {
@@ -79,10 +87,10 @@ angular.module('zideco', [
 }])
 
 
-// .config(['$httpProvider', function($httpProvider) {
-//   //Inlcui interceptores aqui. Eles são definidos no moldulo de servico (service)
-//   //  $httpProvider.interceptors.push('Interceptors');
-// }])
+.config(['$httpProvider', function($httpProvider) {
+  //Inlcui interceptores aqui. Eles são definidos no moldulo de servico (service)
+   $httpProvider.interceptors.push('Interceptors');
+}])
 //
 //.config(['gravatarServiceProvider', function(gravatarServiceProvider) {
 //        gravatarServiceProvider.defaults = {

@@ -8,7 +8,9 @@ angular.module('zideco.hours.reposervices', [])
 
 
 .factory('hoursResourceService', ['$http', '$q', '$log', '$location', 'Restangular', function($http, $q, $log, $location, Restangular) {
-    var resourceTimeEntry = 'timeentry';
+    var timeEntryResource = 'timeentry',
+    timePeriodResource = 'timeperiod'
+    ;
 
     // function resolveErroComPromessa(msg) {
     //    var deferred = $q.defer();
@@ -25,7 +27,7 @@ angular.module('zideco.hours.reposervices', [])
     // }
 
     var getTimeEntries = function(filter) {
-        var restObject = Restangular.all(resourceTimeEntry);
+        var restObject = Restangular.all(timeEntryResource);
         return restObject.getList(filter);
     };
 
@@ -38,13 +40,33 @@ angular.module('zideco.hours.reposervices', [])
             return timeEntry.save();
         }
 
-        return Restangular.all(resourceTimeEntry).post(timeEntry);
+        return Restangular.all(timeEntryResource).post(timeEntry);
+    };
+
+    var getTimePeriods = function(filter) {
+        var restObject = Restangular.all(timePeriodResource);
+        return restObject.getList(filter);
+    };
+
+    var saveTimePeriods = function(timeEntry) {
+        if (_.isUndefined(timeEntry)) {
+            throw new Error('Need object to save.');
+        }
+
+        if (Restangular.configuration.isRestangularized(timeEntry)) {
+            return timeEntry.save();
+        }
+
+        return Restangular.all(timePeriodResource).post(timeEntry);
     };
 
     //return API
     return {
         getTimeEntries: getTimeEntries,
-        saveTimeEntry: saveTimeEntry
+        saveTimeEntry: saveTimeEntry,
+        getTimePeriods: getTimePeriods,
+        saveTimePeriods: saveTimePeriods
+
     };
 
 

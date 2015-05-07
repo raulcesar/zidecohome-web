@@ -4,10 +4,14 @@
 'use strict';
 
 //This is the controller for the "hours module" of the appliation.
-angular.module('zideco.hourscontrollers', ['zideco.services', 'ui.calendar'])
+angular.module('zideco.hourscontrollers', [
+  'ui.calendar',
+  'zideco.services', 
+  'zideco.hours.reposervices'
+  ])
 
 
-.controller('hoursCtrlMain', ['$scope', 'ZModuleservice', function($scope, ZModuleservice) {
+.controller('hoursCtrlMain', ['$scope', 'hoursResourceService', function($scope, hoursResourceService) {
   console.log('Got to hours main controller');
   $scope.summaryEventSources = [];
 
@@ -17,6 +21,7 @@ angular.module('zideco.hourscontrollers', ['zideco.services', 'ui.calendar'])
   // var y = date.getFullYear();
   
   $scope.events = [];
+
   // {
   //   title: 'All Day Event',
   //   start: new Date(y, m, 1)
@@ -53,6 +58,14 @@ angular.module('zideco.hourscontrollers', ['zideco.services', 'ui.calendar'])
   //             currentTimezone: 'America/Chicago' // an option!
   //     };
   $scope.eventSources = [$scope.events];
+  $scope.alertEventOnClick = function(obj) {
+    alert('clicked on day');
+    alert('obj: ' + obj);
+  };
+
+  // var filter = {};
+  hoursResourceService.getTimeEntries();
+
 
   $scope.uiConfig = {
     calendar: {
@@ -63,6 +76,7 @@ angular.module('zideco.hourscontrollers', ['zideco.services', 'ui.calendar'])
         center: 'title',
         right: 'today prev,next'
       },
+      dayClick: $scope.alertEventOnClick,
       // dayClick: $scope.alertEventOnClick,
       // eventDrop: $scope.alertOnDrop,
       // eventResize: $scope.alertOnResize
