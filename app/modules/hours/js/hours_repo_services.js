@@ -60,6 +60,7 @@ angular.module('zideco.hours.reposervices', [])
         return Restangular.all(timePeriodResource).post(timeEntry);
     };
 
+
     //return API
     return {
         getTimeEntries: getTimeEntries,

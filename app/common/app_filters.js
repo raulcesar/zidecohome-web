@@ -8,7 +8,7 @@ angular.module('zideco.filters', [])
             return String(text).replace(/\%VERSION\%/mg, version);
         };
     }])
-    .filter('minutosFiltro', [function () {
+    .filter('minutos', [function () {
         return function (minutos, zeroEsquerda) {
             if (!minutos) {
                 return '';

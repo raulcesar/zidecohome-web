@@ -2,13 +2,15 @@
 <div class="col-xs-12">
    <h1>Summary bar</h1>
    <form>
-      fds
+       <button popover="I appeared on mouse enter!" popover-trigger="mouseenter" ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn btn-default">Mouseenter</button>
+       <button ng-click="refreshCalendar()" class="btn btn-default">Refresh</button>
+
    </form>
 </div>
 <!-- Calendar -->
 <div class="col-xs-12">
    <h1>Calendar:</h1>
    <!-- <div ng-controller="hoursCtrlMain"> -->
-   <div ui-calendar="uiConfig.calendar" class="" ng-model="eventSources" calendar="calendario"> </div>
+   <div ui-calendar="uiConfig.calendar" class="" ng-model="eventSources" calendar="calMesAtual"> </div>
    <!-- </div> -->
 </div>

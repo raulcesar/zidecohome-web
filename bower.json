@@ -22,11 +22,13 @@
     "angular-socket-io": "~0.6.0",
     "angular-ui-grid": "~3.0.0-rc.21",
     "angular-easyfb": "~1.2.0",
-    "angular-ui-calendar": "~0.8.1",
     "moment": "~2.10.2",
-    "angular-local-storage": "~0.1.5"
+    "angular-local-storage": "~0.1.5",
+    "lodash": "~3.8.0",
+    "fullcalendar": "~2.3.1"
   },
   "resolutions": {
-    "jquery": "~2.x"
+    "jquery": "~2.x",
+    "lodash": "~3.8.0"
   }
 }

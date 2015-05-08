@@ -37,7 +37,7 @@ var paths = {
         './app/assets/style/external/**/*.css',
       //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
         './bower_components/angular-ui-grid/ui-grid.min.css',
-        './bower_components/fullcalendar/fullcalendar.css'
+        './bower_components/fullcalendar/dist/fullcalendar.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 

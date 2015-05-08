@@ -207,74 +207,56 @@ angular.module('zideco.services', ['LocalStorageModule'])
             }
         };
     }
-]);
+])
+
+
+//Common objects:
+.factory('ServiceRequestFactory', [function() {
+
+    var ServicesCategories = {
+        TimeEntryServices: {
+            name: 'TimeEntryServices',
+            functions: {
+                processTimeEntriesClean: 'processTimeEntriesClean'
+            }
+        }
+    };
+
+
+    function ServiceRequestFactory() {
+        this.createProcessTimeEntryServiceRequest = function(userId, startDate, endDate) {
+
+            var params = {
+                userId: userId,
+                startDate: startDate,
+                endDate: endDate
+            };
+
+            var service = new ServiceRequest(ServicesCategories.TimeEntryServices.name,
+                ServicesCategories.TimeEntryServices.functions.processTimeEntriesClean,
+                params
+            );
+
+            return service;
+        };
+    }
+
+    function ServiceRequest(category, name, parameters) {
+        this.serviceCategory = category;
+        this.serviceName = name;
+        this.serviceParameters = parameters;
+    }
 
 
 
-// .factory('Interceptors', ['$q', '$rootScope', '$log', 'LASTURL', function($q, $rootScope, $log, LASTURL) {
-//   return {
-//     //    'request': function(config) {
-//     ////      LASTURL.setLasturl({url: config.url});
-//     //      return config || $q.when(config);
-//     //    },
 
-//     //    'requestError': function(rejection) {
-//     //      // do something on error
-//     //      return $q.reject(rejection);
-//     //    },
+    // ServiceRequest.prototype = {
+    // };
+
+    return (new ServiceRequestFactory());
 
 
+}])
 
-//     //    'response': function(response) {
-//     //      $log.info('Url: ' + response.config.url);
-//     //
-//     //      //Guarda ultimo url
-//     //
-//     //      var lastUrl = LASTURL.getLasturl()
-//     //      if (lastUrl && lastUrl.err) {
-//     //        LASTURL.clearLastUrl();
-//     //        //Redirect to lasturl.
-//     //        $location.path(lastUrl.url);
-//     //      }
-//     //      return response;
-//     //    },
+;
 
-//     // optional method
-//     'responseError': function(rejection) {
-//       $log.info('interceptor authInterceptor at your service. ERROR');
-//       console.log(rejection);
-//       //Handle Errors
-//       switch (rejection.status) {
-//         case 401:
-//           if (rejection.data.loginat) {
-//             // var url = rejection.config.url;
-//             //Store url in localsession for future redirect.
-//             var lastUrl = LASTURL.getLasturl();
-//             if (lastUrl) {
-//               lastUrl.err = '401';
-//             }
-//             LASTURL.setLasturl(lastUrl);
-
-
-//             //go to login page.
-//             window.location = rejection.data.loginat;
-//             //              window.location = rejection.data.loginat + '?destination=' + url;
-//           }
-//           break;
-//         case 403:
-//           $rootScope
-//             .$broadcast('auth:forbidden');
-//           break;
-//         case 404:
-//           $rootScope
-//             .$broadcast('page:notFound');
-//           break;
-//         case 500:
-//           $rootScope
-//             .$broadcast('server:error');
-//           break;
-//       }
-//       return $q.reject(rejection);
-//     }
-//   };
-// }]);

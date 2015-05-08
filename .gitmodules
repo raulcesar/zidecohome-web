@@ -1,0 +1,3 @@
+[submodule "submodules/ui-calendar"]
+	path = submodules/ui-calendar
+	url = https://github.com/raulcesar/ui-calendar.git
