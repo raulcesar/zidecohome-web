@@ -1,16 +1,19 @@
 <!-- summary bar -->
 <div class="col-xs-12">
-   <h1>Summary bar</h1>
+   <h1>{{monthSummary.totalValidMinutes | minutos}}</h1>
    <form>
-       <button popover="I appeared on mouse enter!" popover-trigger="mouseenter" ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn btn-default">Mouseenter</button>
-       <button ng-click="refreshCalendar()" class="btn btn-default">Refresh</button>
+<!--        <button popover="I appeared on mouse enter!" popover-trigger="mouseenter" ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn btn-default">Mouseenter</button>
+ -->       
+<button ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn ">Reprocess Month</button>
+       <button ng-click="refreshCalendar()" class="btn ">Refresh Calendar</button>
 
    </form>
 </div>
 <!-- Calendar -->
-<div class="col-xs-12">
-   <h1>Calendar:</h1>
+<!-- <div class="row"> -->
+<div class="blk-padded-top col-xs-12">
    <!-- <div ng-controller="hoursCtrlMain"> -->
-   <div ui-calendar="uiConfig.calendar" class="" ng-model="eventSources" calendar="calMesAtual"> </div>
+   <div ui-calendar="uiConfig.calendar" class="fullheight" ng-model="eventSources" calendar="mainCal"> </div>
    <!-- </div> -->
 </div>
+<!-- </div> -->

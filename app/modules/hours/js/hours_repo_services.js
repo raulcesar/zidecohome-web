@@ -44,6 +44,7 @@ angular.module('zideco.hours.reposervices', [])
     };
 
     var getTimePeriods = function(filter) {
+        
         var restObject = Restangular.all(timePeriodResource);
         return restObject.getList(filter);
     };
