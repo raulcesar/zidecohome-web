@@ -8,3 +8,4 @@ app/scratch/
 .sass-cache
 lint-reports/
 .sublime-gulp.cache
+*.sublime-workspace
