@@ -1,7 +1,7 @@
 <nav class="navbar navbar-zideco" role="navigation" ng-mouseleave="togglenavigationbar(false)">
   <!-- Current module and navigation togler -->
   <div class="navbar-header navbar-module-current">
-    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="{{currentModule.title}}" ui-sref="zideco.hours"></a>
+    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="{{currentModule.title}}" ui-sref="{{currentModule.state}}"></a>
   </div>
   <!-- nav-items to zideco MODULES -->
   <div class="navbar-header navbar-modules" ng-class="{hidden: isnavbarhidden}">
@@ -15,4 +15,7 @@
   </ul>
 </nav>
 <!-- MAIN CONTENT -->
+<div loading opcoes="loadingbox">
+
 <div class="mainContent" ui-view></div>
+</div>

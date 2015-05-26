@@ -2,7 +2,11 @@
  * Created by raul on 29/04/14.
  */
  'use strict';
-angular.module('zideco.states.main', ['zideco.services'])
+angular.module('zideco.states.main', [
+    'zideco.services',
+    'zideco.maincontrollers',
+    'zideco.landing.controllers',
+    ])
 
 .config(['$stateProvider', '$urlRouterProvider', 'ZModuleserviceProvider', function($stateProvider, $urlRouterProvider, ZModuleserviceProvider) {
     // var ZModuleservice = ZModuleserviceProvider.$get[1]();
@@ -31,7 +35,7 @@ angular.module('zideco.states.main', ['zideco.services'])
         data: {
             moduleName: 'Main'
         },
-        controller: 'mainCtrl'
+        controller: 'landingMainCtrl'
     })
 
 

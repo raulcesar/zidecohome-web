@@ -1,5 +1,5 @@
 {
-  "predef": ["angular", "_", "window", "io", "moment"],
+  "predef": ["angular", "_", "window", "io", "moment", "alert"],
   "node": true,
   "esnext": true,
   "bitwise": true,

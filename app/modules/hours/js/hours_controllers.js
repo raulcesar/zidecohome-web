@@ -6,61 +6,38 @@
 //This is the controller for the "hours module" of the appliation.
 angular.module('zideco.hourscontrollers', [
     'ui.calendar',
+    'ui.bootstrap',
+    'ui.router',
     'zideco.services',
     'zideco.common.reposervices',
     'zideco.hours.reposervices',
-    'zideco.filters'
+    'zideco.filters',
+    'zideco.directives',
+    'zideco.hours.daydetailcontrollers',
+    'zideco.commonmodasl'
 ])
 
 
 .controller('hoursCtrlMain', [
+    '$http',
     '$scope',
     '$compile',
+    '$timeout',
+    '$q',
+    '$modal',
+    '$state',
     'uiCalendarConfig',
     'commonResourceService',
     'hoursResourceService',
     'minutosFilter',
     'ServiceRequestFactory',
-    function($scope, $compile, uiCalendarConfig, commonResourceService, hoursResourceService, minutosFilter, ServiceRequestFactory) {
-        console.log('Got to hours main controller');
-
-
-        // var date = new Date();
-        // var d = date.getDate();
-        // var m = date.getMonth();
-        // var y = date.getFullYear();
+    'loadingservice',
+    'Auth',
+    'UsernamePasswordModalService',
+    'MessageIoSocket',
+    function($http, $scope, $compile, $timeout, $q, $modal, $state, uiCalendarConfig, commonResourceService, hoursResourceService, minutosFilter, ServiceRequestFactory, loadingservice, Auth, UsernamePasswordModalService, MessageIoSocket) {
+        console.log('starting up hours controller... Should only happen once!');
         $scope.events = [];
-        $scope.eventsTeste = [
-            // {
-            //     title: 'All Day Event',
-            //     start: new Date(y, m, 1)
-            // }, {
-            //     title: 'Long Event',
-            //     start: new Date(y, m, d - 5),
-            //     end: new Date(y, m, d - 2)
-            // }, {
-            //     id: 999,
-            //     title: 'Repeating Event',
-            //     start: new Date(y, m, d - 3, 16, 0),
-            //     allDay: false
-            // }, {
-            //     id: 999,
-            //     title: 'Repeating Event',
-            //     start: new Date(y, m, d + 4, 16, 0),
-            //     allDay: false
-            // }, {
-            //     title: 'Birthday Party',
-            //     start: new Date(y, m, d + 1, 19, 0),
-            //     end: new Date(y, m, d + 1, 22, 30),
-            //     allDay: false
-            // }, {
-            //     title: 'Click for Google',
-            //     start: new Date(y, m, 28),
-            //     end: new Date(y, m, 29),
-            //     url: 'http://google.com/'
-            // }
-        ];
-
         $scope.summaryEvents = [];
         $scope.eventSources = [{
                 events: $scope.summaryEvents,
@@ -73,13 +50,77 @@ angular.module('zideco.hourscontrollers', [
 
         ];
 
+        MessageIoSocket.init();
+        MessageIoSocket.registerDirectSocketListener(MessageIoSocket.events.news, function(data) {
+            console.log('Recieved NEWS event. Data: ' + JSON.stringify(data));
+        });
 
-        $scope.alertEventOnClick = function(obj) {
-            alert('clicked on day');
-            alert('obj: ' + obj);
+        MessageIoSocket.registerDirectSocketListener(MessageIoSocket.events.zEvtServiceRequestDone, function(data) {
+            console.log('Recieved ServiceDone event. Data: ' + JSON.stringify(data));
+        });
+
+
+
+        // = function(scope, zEvt, cb) {
+
+        // $scope.$on('socket:' + MessageIoSocket.zEvtServiceRequestDone, function(ev, data) {
+        //     console.log('pessoa alterada: ' + data);
+        //     if (parseInt(data.id) === parseInt($scope.pessoaAtivaCompleta.id)) {
+        //         setaSePessoaNova($scope.pessoaAtivaCompleta);
+        //     }
+        // });
+
+        $scope.testio = function() {
+            $http({
+                method: 'GET',
+                url: 'http://localhost:3030/message'
+            }).
+            success(function() {
+                console.log('Just called URL for message. Soon, we should recieve news event!!');
+            }).
+            error(function(err) {
+                console.log('Error trying to call message URL: ' + err);
+            });
+
         };
 
-        $scope.eventRender = function(event, element, view) {
+        $scope.eventClicked = function(calEvent, jsEvent, view) {
+            $scope.openDayDetailPage(calEvent.start);
+
+        };
+
+        $scope.openDayDetailPage = function(obj) {
+
+            //State version:
+            $state.go('zideco.hours.daydetail', {
+                day: obj.format('DDMMYYYY')
+            });
+
+
+
+
+            //Modal version...
+            // var modalInstance = $modal.open({
+            //     animation: false,
+            //     templateUrl: 'modules/hours/views/hours_day_detail.html',
+            //     controller: 'hoursDayDetailCtrl',
+            //     size: 'lg',
+            //     resolve: {
+            //         dayMoment: function() {
+            //             return obj;
+            //         }
+            //     }
+            // });
+
+            // modalInstance.result.then(function (selectedItem) {
+            //       $scope.selected = selectedItem;
+            //     }, function () {
+            //       $log.info('Modal dismissed at: ' + new Date());
+            //     });            
+        };
+
+        // Full signature: (event, element, view) {
+        $scope.eventRender = function(event, element) {
             if (event.notip === true) {
                 return;
             }
@@ -92,40 +133,96 @@ angular.module('zideco.hourscontrollers', [
         };
 
         $scope.startDate = undefined;
-        $scope.endDate= undefined;
-        
+        $scope.endDate = undefined;
+
+
+        var intervalNeedsRefresh = function(start, end) {
+            if (_.isUndefined($scope.startDate) || _.isUndefined($scope.endDate)) {
+                return true;
+            }
+
+            //if start is before start or after end
+            if (start.isBefore($scope.startDate) || start.isAfter($scope.endDate)) {
+                return true;
+            }
+
+            //if end is after end date (or before start... although this should never happen HERE, because if it is a valid period, 
+            //the start would be before end, and hence also befor scope.start, and hence caught in if above!!,)
+            if (end.isAfter($scope.endDate)) {
+                return true;
+            }
+
+            return false;
+        };
+
         $scope.changedDate = function(start, end) {
+            //Only do something if new start and end are not within last interval
+            if (!intervalNeedsRefresh(start, end)) {
+                console.log('do not need refresh');
+                return;
+            }
+            console.log('going to refresh. start: ' + start.format('DD/MM/YYYY') + ' end: ' + end.format('DD/MM/YYYY'));
+
             $scope.startDate = start;
             $scope.endDate = end;
 
             //clear month summary from start to finish
             var startMonth = moment(start.dayReference).month();
             var endMonth = moment(start.dayReference).month();
-            for(var i = startMonth; i <= endMonth; i ++) {
+            for (var i = startMonth; i <= endMonth; i++) {
                 var monthKey = moment(start.dayReference).format('MMYYYY');
                 $scope.monthsummary[monthKey] = undefined;
             }
-
-
-
-            $scope.refreshCalendar();
-
+            $scope.setDefaultPeriods().then(function() {
+                $scope.refreshCalendar();
+            }, function(err) {
+                console.log('Unable to set default periods. error: ' + err);
+            });
         };
+
 
         $scope.monthsummary = {
 
         };
 
-        //Get month of calandar!
+        var errorHandler = function(error) {
+            loadingservice.hide('errorHandler: ' + JSON.stringify(error));
+            console.log('Error: ' + JSON.stringify(error));
+        };
 
+        $scope.setDefaultPeriods = function() {
+            //For now, only one period to set
+            var deferred = $q.defer();
+
+            loadingservice.show('setDefaultPeriods');
+            hoursResourceService.getLastScrapedDate().then(function(maxDate) {
+                var cal = uiCalendarConfig.calendars.mainCal;
+                var currentMoment = cal.fullCalendar('getDate');
+
+                $scope.startDate4Scrape = moment(maxDate).format('DD/MM/YYYY');
+                $scope.endDate4Scrape = moment(currentMoment).startOf('month').add(1, 'months').format('DD/MM/YYYY');
+                loadingservice.hide('setDefaultPeriods_success');
+                deferred.resolve(maxDate);
+
+            }, function(error) {
+                loadingservice.hide('errorHandler: ' + JSON.stringify(error));
+                deferred.reject(error);
+            });
+
+            return deferred.promise;
+
+        };
+
+        //Get month of calandar!
         $scope.refreshCalendar = function() {
             //Lets get the PeriodEntries for the current user to create events.
-    
+
             var filter = {
                 start: $scope.startDate.toDate(),
                 end: $scope.endDate.toDate()
             };
 
+            loadingservice.show('refreshCalendar');
 
             hoursResourceService.getTimePeriods(filter).then(function(data) {
                 //Each object has a "validMinutes" that tells us how many minutes
@@ -201,28 +298,49 @@ angular.module('zideco.hourscontrollers', [
 
 
                 console.log('events should have: ' + $scope.events.length);
+                loadingservice.hide('refreshCalendar_success');
 
 
-            });
+
+            }, errorHandler);
 
 
         };
 
-
+        //Process entries and create periods
         $scope.sendEntryProcessServiceRequestCurrentMonth = function() {
             var cal = uiCalendarConfig.calendars.mainCal;
             var currentMoment = cal.fullCalendar('getDate');
             var startMoment = moment(currentMoment).startOf('month');
             var endMoment = moment(startMoment).add(1, 'month');
-            var userId = 2; //TODO: Get from current user
 
-
-
-            var serviceRequest = ServiceRequestFactory.createProcessTimeEntryServiceRequest(userId, startMoment.toDate(), endMoment.toDate());
-            commonResourceService.saveServiceRequest(serviceRequest).then(function(data) {
-                console.log('sent servicerequest');
+            //Send with undefined userid to process current user.
+            var serviceRequest = ServiceRequestFactory.createProcessTimeEntryServiceRequest(undefined, startMoment.toDate(), endMoment.toDate());
+            commonResourceService.saveServiceRequest(serviceRequest).then(function() {
+                console.log('Time Period processing service started ');
             });
+        };
 
+        //Scrape entries from source webpage
+        $scope.sendScrapeTimeEntriesServiceRequestCurrentMonth = function() {
+            var startMoment = moment($scope.startDate4Scrape, 'DD/MM/YYYY');
+            var endMoment = moment($scope.endDate4Scrape, 'DD/MM/YYYY');
+
+            //Open modal for username and password.
+            var modalInstance = UsernamePasswordModalService.getUsernamePasswordModal();
+            modalInstance.result
+                .then(
+                    function(userRetObj) {
+                        var scrapeService = ServiceRequestFactory.createTimeEntryScrapingServiceRequest(userRetObj.username, userRetObj.password, startMoment.toDate(), endMoment.toDate());
+                        commonResourceService.saveServiceRequest(scrapeService).then(function() {
+                            console.log('Scraping service started');
+                        });
+                    },
+                    function(err) {
+                        if (err) {
+                            console.log('Error after username/password modal: ' + err);
+                        }
+                    });
         };
 
 
@@ -235,10 +353,11 @@ angular.module('zideco.hourscontrollers', [
                     center: 'title',
                     right: 'today prev,next'
                 },
-                dayClick: $scope.alertEventOnClick,
+                dayClick: $scope.openDayDetailPage,
+                eventClick: $scope.eventClicked,
                 eventRender: $scope.eventRender,
                 viewRender: function(view, element) {
-                    $scope.changedDate(view.start, view.end);
+                        $scope.changedDate(view.start, view.end);
                         console.log('View Changed: ' + ' - ' + view.start.format('DD/MM/YYYY') + ' - ' + view.end.format('DD/MM/YYYY'));
                     }
                     // dayClick: $scope.alertEventOnClick,
@@ -248,7 +367,9 @@ angular.module('zideco.hourscontrollers', [
         };
 
 
-        // $scope.refreshCalendar();
+        //Initialization.
+        // $scope.refreshCalendar(); - commented out because fullCal already calls this.
+        
 
     }
 ]);

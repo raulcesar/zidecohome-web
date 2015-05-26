@@ -4,7 +4,12 @@
 var config = angular.module('zideco.envconfig', []);
 
 config.constant('CONFIG', {
-  RestangularBaseUrl: 'http://zideco.org/zidecoapi',
-  MessageIoSocketUrl: 'http://zideco.org/zidecoapi'
+	BackendProtocol: 'http',
+	BackendPort: '',
+	BackendBasePath: 'zidecoapi/',
+
+    BackendBaseUrl: 'http://zideco.org/zidecoapi/',
+    RestangularBaseUrl: 'http://zideco.org/zidecoapi',
+    MessageIoSocketUrl: 'http://zideco.org/zidecoapi'
 
 });

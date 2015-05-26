@@ -1,1 +1,9 @@
 <h1>Landing page</h1>
+<!-- http://localhost:3030/logingoogle?referer=http://localhost:9000/ -->
+<div>
+    <a ng-href="{{googleAutologinUrl}}">Login at google</a>
+</div>
+<div ng-if="loginatUrl">
+    <h1>You attempted to access a restricted service.</h1>
+    <a ng-href="{{loginatUrl}}">Login at google</a>
+</div>

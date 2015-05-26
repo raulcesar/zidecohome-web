@@ -37,7 +37,10 @@ var paths = {
         './app/assets/style/external/**/*.css',
       //TODO: quando o UI-GRID vier do bower, temos que colocar abaixo.
         './bower_components/angular-ui-grid/ui-grid.min.css',
-        './bower_components/fullcalendar/dist/fullcalendar.css'
+        './bower_components/fullcalendar/dist/fullcalendar.css',
+        './bower_components/ag-grid/dist/angularGrid.css',
+        './bower_components/ag-grid/dist/theme-fresh.css',
+        './bower_components/ag-grid/dist/theme-dark.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 
@@ -61,9 +64,13 @@ var paths = {
 
         './bower_components/angular-sanitize/angular-sanitize.min.js',
         './bower_components/ng-file-upload/angular-file-upload.min.js',
+        './bower_components/ag-grid/dist/angularGrid.min.js',
 
         //not minimized.....
         './bower_components/angular-webstorage/angular-webstorage.js'
+
+
+
     ],
     vendorMapFiles: [
         './bower_components/angular/angular.min.js.map',

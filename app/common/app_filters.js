@@ -3,13 +3,13 @@
 /* Filters */
 
 angular.module('zideco.filters', [])
-    .filter('interpolate', ['version', function (version) {
-        return function (text) {
+    .filter('interpolate', ['version', function(version) {
+        return function(text) {
             return String(text).replace(/\%VERSION\%/mg, version);
         };
     }])
-    .filter('minutos', [function () {
-        return function (minutos, zeroEsquerda) {
+    .filter('minutos', [function() {
+        return function(minutos, zeroEsquerda) {
             if (!minutos) {
                 return '';
             }
@@ -21,7 +21,8 @@ angular.module('zideco.filters', [])
             var horas = Math.floor(minutos / 60);
             minutos = minutos % 60;
 
-            var paddingminutos = '', paddinghoras = '';
+            var paddingminutos = '',
+                paddinghoras = '';
             var separadorhoras = 'h. ';
             var separadorminutos = 'm.';
             if (zeroEsquerda) {
@@ -35,11 +36,23 @@ angular.module('zideco.filters', [])
             return ((paddinghoras + (horas)).slice(-3) + separadorhoras + ((paddingminutos + (minutos)).slice(-2)) + separadorminutos);
         };
     }])
-    .filter('gravatarDefault', ['', function() {
-        return function (text) {
 
-            return (text || 'mm');
-        };
-    }])
+.filter('momentstandarddate', [function() {
+    return function(moment, format) {
+        if (!moment) {
+            return '';
+        }
+
+        format = format || 'DD/MM/YYYY';
+        return moment.format(format);
+    };
+}])
+
+.filter('gravatarDefault', ['', function() {
+    return function(text) {
+
+        return (text || 'mm');
+    };
+}])
 
 ;

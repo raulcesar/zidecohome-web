@@ -3,14 +3,14 @@
  */
 'use strict';
 
-angular.module('zideco.hours.reposervices', [])
+angular.module('zideco.hours.reposervices', ['restangular'])
     .constant('version', '0.0.1')
 
 
 .factory('hoursResourceService', ['$http', '$q', '$log', '$location', 'Restangular', function($http, $q, $log, $location, Restangular) {
     var timeEntryResource = 'timeentry',
-    timePeriodResource = 'timeperiod'
-    ;
+        timePeriodResource = 'timeperiod',
+        maxScrapedTimeentry = 'maxscrapedtimeentry';
 
     // function resolveErroComPromessa(msg) {
     //    var deferred = $q.defer();
@@ -25,6 +25,30 @@ angular.module('zideco.hours.reposervices', [])
     //    });
     //    return deferred.promise;
     // }
+    var getTimeEntry = function(id) {
+        if (_.isUndefined(id)) {
+            throw new Error('Please specify ID.');
+        }
+
+        return Restangular.one(timeEntryResource, id).get();
+    };
+
+    var getLastScrapedDate = function(filter) {
+        return Restangular.one(maxScrapedTimeentry).get(filter);
+        // var deferred = $q.defer();
+        // Restangular.all(maxScrapedTimeentry).getList(filter).then(function(maxDateArray) {
+        //     var maxDate;
+        //     if (!_.isEmpty(maxDateArray)) {
+        //         maxDate = maxDateArray[0];
+        //     }
+        //     deferred.resolve(maxDate);
+        // }, function(err) {
+        //     deferred.reject(err);
+        // });
+
+        // return deferred.promise;
+    };
+
 
     var getTimeEntries = function(filter) {
         var restObject = Restangular.all(timeEntryResource);
@@ -44,7 +68,7 @@ angular.module('zideco.hours.reposervices', [])
     };
 
     var getTimePeriods = function(filter) {
-        
+
         var restObject = Restangular.all(timePeriodResource);
         return restObject.getList(filter);
     };
@@ -67,7 +91,9 @@ angular.module('zideco.hours.reposervices', [])
         getTimeEntries: getTimeEntries,
         saveTimeEntry: saveTimeEntry,
         getTimePeriods: getTimePeriods,
-        saveTimePeriods: saveTimePeriods
+        saveTimePeriods: saveTimePeriods,
+        getTimeEntry: getTimeEntry,
+        getLastScrapedDate: getLastScrapedDate
 
     };
 
