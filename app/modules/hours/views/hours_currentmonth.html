@@ -1,17 +1,27 @@
 <!-- summary bar -->
 <div class="col-xs-12">
     <h1>{{monthSummary.totalValidMinutes | minutos}}</h1>
-    <form>
-        <input type="text" class="form-control" placeholder="Start Date" ng-model="startDate4Scrape">
-        <input type="text" class="form-control" placeholder="End Date" ng-model="endDate4Scrape">
-        <button ng-click="testio()" class="btn btn-danger">The socket-io test button!</button>
-
-        <button ng-click="sendScrapeTimeEntriesServiceRequestCurrentMonth()" class="btn ">Scrape Period</button>
-        <button ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn ">Reprocess Month</button>
-        <button ng-click="refreshCalendar()" class="btn ">Refresh Calendar</button>
+    
+    <form class="form-inline ">
+        <div class="col-xs-12 verticle-padded">
+            <input type="text" class="form-control" placeholder="Start Date" ng-model="startDate4Scrape">
+            <span>to</span>
+            <input type="text" class="form-control" placeholder="End Date" ng-model="endDate4Scrape">
+        </div>
     </form>
-</div>
+    
+        <div class="col-xs-12">
+            <button ng-click="testio()" class="btn btn-danger">The socket-io test button!</button>
+            <button ng-click="sendScrapeTimeEntriesServiceRequestCurrentMonth()" class="btn ">Scrape Period</button>
+            <button ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn ">Reprocess Entries For Month</button>
+            <button ng-click="sendScrapeAndProcessServiceRequestForPeriod()" class="btn ">Scrape and Reprocess Period</button>
+            <button ng-click="testloading()" class="btn ">Test Loading.</button>
+            <button ng-click="refreshCalendar()" class="btn ">Refresh Calendar</button>
+        </div>
+
 <!-- Calendar -->
-<div class="blk-padded-top col-xs-12">
+<div class="verticle-padded col-xs-12">
     <div ui-calendar="uiConfig.calendar" class="fullheight" ng-model="eventSources" calendar="mainCal"> </div>
+</div>
+
 </div>

@@ -4,7 +4,9 @@
  */
 'use strict';
 
-angular.module('zideco.directives', ['zideco.services'])
+angular.module('zideco.directives', [
+    'zideco.services'
+    ])
 
 .directive('backImg', function(){
 
@@ -16,6 +18,34 @@ angular.module('zideco.directives', ['zideco.services'])
         });
     };
 })
+
+// .directive('autoFocus', function() {
+//     return {
+//         link: {
+//             pre: function preLink(scope, element, attr) {
+//                 console.debug('prelink called');
+//                 // this fails since the element hasn't rendered
+//                 //element[0].focus();
+//             },
+//             post: function postLink(scope, element, attr) {
+//                 console.debug('postlink called');
+//                 // this succeeds since the element has been rendered
+//                 element[0].focus();
+//             }
+//         }
+//     };
+// })
+.directive('autoFocus', function($timeout) {
+    return {
+        restrict: 'AC',
+        link: function(_scope, _element) {
+            $timeout(function(){
+                _element[0].focus();
+            }, 0);
+        }
+    };
+})
+
 
 .directive('loading', ['loadingservice',  function(loadingservice) {
     return {
@@ -37,6 +67,7 @@ angular.module('zideco.directives', ['zideco.services'])
 
 
             scope.$on(loadingservice.lodingEvents.evtDone, function() {
+                console.log('received event evtDone. Going to set satte.visivel to false');
                 scope.state.visivel = false;
             });
 

@@ -2,7 +2,7 @@
  * Created by raul on 8/21/14.
  */
 'use strict';
-var zidecoPocStates = angular.module('zideco.pocs.uistates', ['ui.router']);
+var zidecoPocStates = angular.module('zideco.pocs.uistates', ['ui.router', 'zideco.pocs.loading']);
 
 
 zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
@@ -11,7 +11,8 @@ zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
       .state('pocs', {
          url: '/pocs',
          templateUrl: 'pocs/pocs.html',
-         controller: 'pocCtrl'
+         abstract: true,
+         // controller: 'pocCtrl'
 
       })
      .state('pocs.uigrid', {
@@ -37,7 +38,12 @@ zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
        url: '/pocsfileupload',
        templateUrl: 'pocs/poc-fileupload.html',
        controller: 'pocCtrl'
+     })
 
+     .state('pocs.loading', {
+       url: '/loading',
+       templateUrl: 'pocs/poc-loading.html',
+       controller: 'pocLoadingCtrl'
      })
    ;
 

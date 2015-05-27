@@ -1,21 +1,23 @@
 <nav class="navbar navbar-zideco" role="navigation" ng-mouseleave="togglenavigationbar(false)">
-  <!-- Current module and navigation togler -->
-  <div class="navbar-header navbar-module-current">
-    <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="{{currentModule.title}}" ui-sref="{{currentModule.state}}"></a>
-  </div>
-  <!-- nav-items to zideco MODULES -->
-  <div class="navbar-header navbar-modules" ng-class="{hidden: isnavbarhidden}">
-    <a class="fa icon-bar-image" ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="{{module.title}}" ui-sref="{{module.state}}">
-    </a>
-  </div>
-  <ul class="navbar-header navbar-right nav">
-    <li>$state = {{$state.current.name}}</li>
-    <li>$stateParams = {{$stateParams}}</li>
-    <li>$state full url = {{ $state.$current.url.source }}</li>
-  </ul>
+    <!-- Current module and navigation togler -->
+    <div class="navbar-header navbar-module-current">
+        <a ng-mouseover="togglenavigationbar(true)" class="icon-bar-image fa" ng-class="currentModule.formatingClasses" href="" title="{{currentModule.title}}" ng-href="{{currentModuleUrl}}">
+        </a>
+    </div>
+    <!-- nav-items to zideco MODULES -->
+    <div class="navbar-header navbar-modules" ng-class="{hidden: isnavbarhidden}">
+        <a class="fa icon-bar-image" ng-repeat="(name, module) in modules" ng-class="module.formatingClasses" href="" title="{{module.title}}" ui-sref="{{module.state}}">
+        </a>
+    </div>
+    <ul class="navbar-header navbar-right nav">
+        <li>$state = {{$state.current.name}}</li>
+        <li>$stateParams = {{$stateParams}}</li>
+        <li>$state full url = {{ $state.$current.url.source }}</li>
+    </ul>
 </nav>
 <!-- MAIN CONTENT -->
 <div loading opcoes="loadingbox">
-
-<div class="mainContent" ui-view></div>
+    <div class="mainContent" ui-view></div>
 </div>
+<!-- Using ng-href and setting variable in controller, because dynamic ui-sref only works in chrome. -->
+<!-- ui-sref="{{currentModule.state}}"> -->

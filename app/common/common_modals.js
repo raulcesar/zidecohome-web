@@ -4,15 +4,15 @@
 'use strict';
 
 //This is the controller for the 'hours module' of the appliation.
-angular.module('zideco.commonmodasl', [
+angular.module('zideco.commonmodals', [
         'ui.bootstrap',
         'ui.router',
         'zideco.services',
         // 'zideco.common.reposervices',
         'zideco.hours.reposervices',
         'zideco.filters',
-        // 'zideco.directives',
-
+        'zideco.directives',
+        'zideco.directives.keypress',
         'angularGrid'
     ])
     .controller('UsernamePasswordCtrl', [
@@ -29,9 +29,42 @@ angular.module('zideco.commonmodasl', [
                 });
             };
 
+            // $scope.ghommis = function() {
+            //     $scope.keyDownConfig.push({
+            //         mode: 'keydown',
+            //         combinations: [{
+            //             key: 'c'
+            //         }],
+            //         bindOn: true,
+            //         callback: $scope.closeWithEscape
+            //     });
+            // };
+
             $scope.cancel = function() {
+                // $scope.keyDownConfig[0].bindOn = false;
+                // $scope.keyDownConfig[1].bindOn = false;
+
                 $modalInstance.dismiss();
             };
+
+            $scope.closeWithEscape = function($event) {
+                $event.preventDefault();
+                $scope.cancel();
+            };
+
+            $scope.keyDownConfig = [{
+                    mode: 'keydown',
+                    combinations: [{
+                        // key: 'esc'
+                        key: 'enter'
+                    }],
+                    bindOn: true,
+                    callback: $scope.ok
+                }
+
+            ];
+
+
 
         }
     ])
@@ -42,8 +75,8 @@ angular.module('zideco.commonmodasl', [
                 templateUrl: 'common/templates/username_password.html',
                 controller: 'UsernamePasswordCtrl',
                 backdrop: 'static',
-                size: 'lg',
-                keyboard: false
+                size: 'sm',
+                // keyboard: true
             });
 
         };

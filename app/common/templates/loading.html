@@ -1,22 +1,14 @@
 <div ng-if="state.visivel">
-    <!-- <div class="white_content"> <i class="loading-spinner fa fa-spinner fa-spin"></i> </div> -->
     <div class="white_content">
-    	<!-- <div class="blockspinner" ng-click="stop()"></div> -->
 		<div class="spinner" >
 			<div class="cube1"></div>
   			<div class="cube2"></div>
 		</div> 
 
         <span class="loading-spinner fa">{{options.text}}</span>
-        <!--         <span class="loading-spinner">
-    		<i class="fa fa-circle-o-notch fa-spin fa-fw"></i>{{options.texto}}
-    	<span>
- -->
     </div>
     <div class="black_overlay"></div>
 </div>
-<!-- <div ng-if="!state.visivel">
-    <ng-transclude></ng-transclude>
-</div>
- -->    
+
+
  <ng-transclude></ng-transclude>

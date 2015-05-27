@@ -336,7 +336,8 @@ angular.module('zideco.services', [
                 console.log('Warning... showcounter is below zero... this should never happen: ' + showCounters);
             }
             showCounters = 0;
-
+            
+            console.log('showCounters at zero or below. Going to broadcast evtDone.');
             $rootScope.$broadcast(lodingEvents.evtDone);
         }
 
@@ -469,6 +470,12 @@ angular.module('zideco.services', [
             functions: {
                 scrapeTimeEntriesClean: 'scrapeTimeEntriesClean'
             }
+        },
+        SequencedServicesService: {
+            name: 'SequencedServicesService',
+            functions: {
+                runServices: 'runServices'
+            }
         }
 
     };
@@ -499,6 +506,21 @@ angular.module('zideco.services', [
 
             var service = new ServiceRequest(ServicesCategories.TimeEntryScrapingServices.name,
                 ServicesCategories.TimeEntryScrapingServices.functions.scrapeTimeEntriesClean,
+                params
+            );
+
+            return service;
+        };
+
+        this.createScrapeAndProcessSequenceServiceRequest = function(userId, username, password, startDate, endDate) {
+            var scrapeService = this.createTimeEntryScrapingServiceRequest(username, password, startDate, endDate);
+            var processEntryService = this.createProcessTimeEntryServiceRequest(userId, startDate, endDate);
+            var params = {
+                innerServiceRequestObjects: [scrapeService, processEntryService]
+            };
+
+            var service = new ServiceRequest(ServicesCategories.SequencedServicesService.name,
+                ServicesCategories.SequencedServicesService.functions.runServices,
                 params
             );
 
