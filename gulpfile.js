@@ -309,13 +309,13 @@ gulp.task('lint-dev', function () {
 
 gulp.task('connect', plugins.connect.server({
     root: ['build'],
-    port: 9000,
+    port: 9092,
     livereload: true
 }));
 
 gulp.task('connect-dev', plugins.connect.server({
     root: ['.', 'app'],
-    port: 9000,
+    port: 9092,
     livereload: true
 }));
 

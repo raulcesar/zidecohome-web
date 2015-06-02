@@ -5,9 +5,9 @@ var config = angular.module('zideco.envconfig', []);
 
 config.constant('CONFIG', {
 	BackendProtocol: 'http',
-	BackendPort: ':3030',
+	BackendPort: ':3032',
 	BackendBasePath: '',
-    BackendBaseUrl: 'http://localhost:3030/',
-    RestangularBaseUrl: 'http://localhost:3030/',
-    MessageIoSocketUrl: 'http://localhost:3030',
+    BackendBaseUrl: 'http://localhost:3032/',
+    RestangularBaseUrl: 'http://localhost:3032/',
+    MessageIoSocketUrl: 'http://localhost:3032',
 });
