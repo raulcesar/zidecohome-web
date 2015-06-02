@@ -94,19 +94,19 @@ angular.module('zideco.hourscontrollers', [
         //     }
         // });
 
-        $scope.testio = function() {
-            $http({
-                method: 'GET',
-                url: 'http://localhost:3030/message'
-            }).
-            success(function() {
-                console.log('Just called URL for message. Soon, we should recieve news event!!');
-            }).
-            error(function(err) {
-                console.log('Error trying to call message URL: ' + err);
-            });
+        // $scope.testio = function() {
+        //     $http({
+        //         method: 'GET',
+        //         url: 'http://localhost:3030/message'
+        //     }).
+        //     success(function() {
+        //         console.log('Just called URL for message. Soon, we should recieve news event!!');
+        //     }).
+        //     error(function(err) {
+        //         console.log('Error trying to call message URL: ' + err);
+        //     });
 
-        };
+        // };
 
         $scope.eventClicked = function(calEvent, jsEvent, view) {
             $scope.openDayDetailPage(calEvent.start);
