@@ -203,7 +203,7 @@ angular.module('zideco.hourscontrollers', [
             var phases = ['timeperiods', 'holidays'];
             var phaseController = zidecoUtils.getPhaseController('monthSummaryPhaseController', phases, $scope.finishCalendarRefresh);
 
-
+            //Call in parallel both helper functions. The phaseController will take care of when to "finish everything up".
             monthSummaryHelpers.refreshTimePeriods($scope.startDate, $scope.endDate, $scope.timePeriodEvents, $scope.timePeriodProjectedEvents, $scope.summaryEvents, uiCalendarConfig, phaseController, phases[0]);
             monthSummaryHelpers.refreshHolidays($scope, uiCalendarConfig, phaseController, phases[1]);
 

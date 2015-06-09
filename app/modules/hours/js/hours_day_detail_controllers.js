@@ -366,18 +366,9 @@ angular.module('zideco.hours.daydetailcontrollers', [
                             ret.columnTitle = 'Time Period';
                             ret.startMoment = start;
 
-
+                            //Project timeperiod.
                             if (!timePeriod.endTime) {
-                                if (moment(timePeriod.dayReference).isSame(moment(), 'day')) {
-                                    timePeriod.endTime = moment().toDate();
-                                    timePeriod.status = 'projected';
-
-
-                                    var rawMinutes = moment(timePeriod.endTime).diff(moment(timePeriod.startTime), 'minutes');
-                                    timePeriod.rawMinutes = rawMinutes;
-                                    timePeriod.validMinutes = rawMinutes;
-                                    end = timePeriod.endTime ? moment(timePeriod.endTime) : undefined;
-                                } else {
+                                if (!hoursServices.projectPeriodEndTime(timePeriod)) {
                                     ret.startValue = start.format(format);
                                     ret.endValue = end.format(format);
                                     ret.value = start.format(format) + ' - INVALID END';
@@ -386,6 +377,7 @@ angular.module('zideco.hours.daydetailcontrollers', [
                                     ret.status = timePeriod.origin + ' - INVALID';
                                     return ret;
                                 }
+                                end = timePeriod.endTime ? moment(timePeriod.endTime) : undefined;
                             }
 
                             if (end && start.date() !== end.date()) {
