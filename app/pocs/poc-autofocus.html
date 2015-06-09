@@ -1,0 +1,27 @@
+<form fs-form-for="frm1" >
+    <p>focusStart: {{focusStart}}</p>
+    <p>focusUserName: {{focusUserName}}</p>
+    <p>focusEnd: {{focusEnd}}</p>
+    <div>
+        <div>
+            <p>{{curentTimePeriodInput.startValue}}</p>
+            <input type="text" ng-model="curentTimePeriodInput.startValue" auto-focus="focusStart" />
+        </div>
+        <div>
+            <p>{{username}}</p>
+            <input type="text" class="span3" name="bla" id="username" placeholder="Username" ng-model="username" auto-focus="focusUserName">
+        </div>
+        <hr>
+        <!-- <input type="text"  ng-change="endChanged()" auto-focus="focusEnd" ng-model="curentTimePeriodInput.endValue" ui-mask="99:99"</div> -->
+        <!-- <div auto-focus="focusEnd"> -->
+            <fs-input as="fs-time" fs-focus-when="focusEnd" label=" " name="a" ng-model="curentTimePeriodInput.endValue" ng-change="endChanged()">
+            </fs-input>
+        <!-- </div> -->
+    </div>
+    <button id="btnUser" type="button" class="btn " ng-click="setfocusUser()" title="Set the focus">
+        Set focus on User.
+    </button>
+    <button id="btnEnd" type="button" class="btn " ng-click="setfocusEnd()" title="Set the focus">
+        Set focus on end.
+    </button>
+</form>

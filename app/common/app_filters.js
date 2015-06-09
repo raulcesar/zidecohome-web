@@ -8,32 +8,32 @@ angular.module('zideco.filters', [])
             return String(text).replace(/\%VERSION\%/mg, version);
         };
     }])
-    .filter('minutos', [function() {
-        return function(minutos, zeroEsquerda) {
-            if (!minutos) {
+    .filter('minutes', [function() {
+        return function(minutes, zeroEsquerda) {
+            if (!minutes) {
                 return '';
             }
 
             zeroEsquerda = zeroEsquerda === undefined ? false : zeroEsquerda;
-            if (minutos < 0) {
-                minutos = 0;
+            if (minutes < 0) {
+                minutes = 0;
             }
-            var horas = Math.floor(minutos / 60);
-            minutos = minutos % 60;
+            var horas = Math.floor(minutes / 60);
+            minutes = minutes % 60;
 
-            var paddingminutos = '',
+            var paddingminutes = '',
                 paddinghoras = '';
             var separadorhoras = 'h. ';
-            var separadorminutos = 'm.';
+            var separadorminutes = 'm.';
             if (zeroEsquerda) {
                 paddinghoras = '000';
-                paddingminutos = '0';
+                paddingminutes = '0';
                 separadorhoras = ':';
-                separadorminutos = '';
+                separadorminutes = '';
             }
 
 
-            return ((paddinghoras + (horas)).slice(-3) + separadorhoras + ((paddingminutos + (minutos)).slice(-2)) + separadorminutos);
+            return ((paddinghoras + (horas)).slice(-3) + separadorhoras + ((paddingminutes + (minutes)).slice(-2)) + separadorminutes);
         };
     }])
 

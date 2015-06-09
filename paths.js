@@ -40,7 +40,8 @@ var paths = {
         './bower_components/fullcalendar/dist/fullcalendar.css',
         './bower_components/ag-grid/dist/angularGrid.css',
         './bower_components/ag-grid/dist/theme-fresh.css',
-        './bower_components/ag-grid/dist/theme-dark.css'
+        './bower_components/ag-grid/dist/theme-dark.css',
+        './bower_components/angular-formstamp/formstamp.css'
     ],
     vendorsass: ['./app/assets/style/external/**/*.scss'],
 

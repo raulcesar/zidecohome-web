@@ -1,0 +1,59 @@
+<div ng-class="barStyle">
+    <span class="pull-left">
+    <button id="btnNew"
+            type="button"
+            class="btn "
+            ng-disabled="!barOptions.allowNew"
+            ng-hide="barOptions.hideNew"
+            ng-click="executeAction(newItem, barOptions.allowNew)"
+            title="Insert new item">
+        <i class="fa fa-plus"></i>
+    </button>
+    <button id="btnEditActive"
+            type="button"
+            class="btn "
+            ng-disabled="!barOptions.allowEdit"
+            ng-hide="barOptions.hideEdit"
+            ng-click="executeAction(editActive, barOptions.allowEdit)"
+            title="Edit active item">
+        <i class="fa fa-pencil"></i>
+    </button>
+    <button id="btnDeleteAtivo"
+            type="button"
+            class="btn "
+            ng-hide="barOptions.hideDelete"
+            ng-disabled="!barOptions.allowDelete"
+            ng-click="executeAction(deleteActive, barOptions.allowDelete)"
+            title="Delete active item">
+        <i class="fa fa-minus"></i>
+    </button>
+    <button id="btnPrintActive"
+            type="button"
+            class="btn "
+            ng-disabled="!barOptions.allowPrint"
+            ng-hide="barOptions.hidePrint"
+            ng-click="executeAction(printActive, barOptions.allowPrint)"
+            title="Print active item">
+        <i class="fa fa-print"></i>
+    </button>
+
+    <button id="btnSaveActive"
+            type="button"
+            class="btn "
+            ng-disabled="!barOptions.allowSave"
+            ng-hide="barOptions.hideSave"
+            ng-click="executeAction(saveActive, barOptions.allowSave)"
+            title="Save active item">
+        <i class="fa fa-save"></i>
+    </button>
+
+    <span ng-if="barTitle">
+        <span class="">
+            <h3 class="barTitle">{{barTitle}}</h3>
+        </span>
+    </span>
+
+    </span>
+
+
+</div>

@@ -19,6 +19,7 @@ angular.module('zideco.commonmodals', [
         '$scope',
         '$modalInstance',
         function($scope, $modalInstance) {
+            $scope.focusUserName = true;
             $scope.username = undefined;
             $scope.password = undefined;
 
@@ -63,12 +64,24 @@ angular.module('zideco.commonmodals', [
                 }
 
             ];
-
-
-
         }
     ])
-    .factory('UsernamePasswordModalService', ['$rootScope', '$modal', function($rootScope, $modal) {
+
+    .controller('ConfirmationCtrl', ['$scope', '$modalInstance', 'alertText', function($scope, $modalInstance, alertText) {
+        $scope.alertText = alertText;
+        $scope.yes = function() {
+            $modalInstance.close('yes');
+
+        };
+
+        $scope.no = function() {
+            $modalInstance.dismiss('no');
+        };
+
+    }])
+
+
+    .factory('CommonDialogsService', ['$rootScope', '$modal', function($rootScope, $modal) {
         var getUsernamePasswordModal = function() {
             //Will open modal and return promise 
             return $modal.open({
@@ -81,12 +94,31 @@ angular.module('zideco.commonmodals', [
 
         };
 
+        var getModalConfirmation = function(argAlertText) {
+
+            var alertText = argAlertText;
+            //Will open modal and return promise 
+            return $modal.open({
+                templateUrl: 'common/templates/modal_confirmation.html',
+                controller: 'ConfirmationCtrl',
+                backdrop: false,
+                resolve: {
+                    alertText: function() {
+                        return alertText;
+                    }
+                }
+                // size: 'sm',
+                // keyboard: true
+            });
+        };
+
+
 
         //return API
         return {
-            getUsernamePasswordModal: getUsernamePasswordModal
+            getUsernamePasswordModal: getUsernamePasswordModal,
+            getModalConfirmation: getModalConfirmation
         };
     }])
-
 
 ;

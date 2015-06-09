@@ -1,4 +1,3 @@
-
 /**
  * Created by raul on 11/04/14.
  */
@@ -6,14 +5,14 @@
 
 angular.module('zideco.directives', [
     'zideco.services'
-    ])
+])
 
-.directive('backImg', function(){
+.directive('backImg', function() {
 
-    return function(scope, element, attrs){
+    return function(scope, element, attrs) {
         attrs.$observe('backImg', function(value) {
             element.css({
-                'background-image': 'url(' + value +')'
+                'background-image': 'url(' + value + ')'
             });
         });
     };
@@ -38,16 +37,39 @@ angular.module('zideco.directives', [
 .directive('autoFocus', function($timeout) {
     return {
         restrict: 'AC',
-        link: function(_scope, _element) {
-            $timeout(function(){
-                _element[0].focus();
-            }, 0);
+        replace: false,
+        scope: {
+            trigger: '=autoFocus'
+        },
+        link: function(scope, element, attrs) {
+            if (attrs.autoFocus === '') {
+                attrs.autoFocus = 'focusElement';
+            }
+            var focusElement = element[0];
+            //Check if element is input
+            if (focusElement.tagName !== 'INPUT') {
+                
+                focusElement = element.find('input:first');
+                var test = focusElement.tagName;
+                console.log(test);
+            }
+
+
+            scope.$watch('trigger', function(value) {
+                if (value === true) {
+                    $timeout(function() {
+                        focusElement.focus();
+                    }, 0);
+                    console.log('Set trigger to false');
+                    scope.trigger = false;
+                }
+            });
         }
     };
 })
 
 
-.directive('loading', ['loadingservice',  function(loadingservice) {
+.directive('loading', ['loadingservice', function(loadingservice) {
     return {
         restrict: 'EA',
         transclude: true,
@@ -56,18 +78,19 @@ angular.module('zideco.directives', [
             state: '='
         },
         templateUrl: 'common/templates/loading.html',
-        
+
 
         // link: function(scope, element, attrs) (assinatura completa)
         link: function(scope) {
             scope.options = scope.options || {
                 text: 'Wait...'
             };
-            scope.state = {visivel: false};
+            scope.state = {
+                visivel: false
+            };
 
 
             scope.$on(loadingservice.lodingEvents.evtDone, function() {
-                console.log('received event evtDone. Going to set satte.visivel to false');
                 scope.state.visivel = false;
             });
 
@@ -82,4 +105,3 @@ angular.module('zideco.directives', [
 
 
 ;
-

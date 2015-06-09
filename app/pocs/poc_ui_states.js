@@ -2,10 +2,9 @@
  * Created by raul on 8/21/14.
  */
 'use strict';
-var zidecoPocStates = angular.module('zideco.pocs.uistates', ['ui.router', 'zideco.pocs.loading']);
+angular.module('zideco.pocs.uistates', ['ui.router', 'zideco.pocs.loading', 'zideco.pocs.autofocus'])
 
-
-zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
+.config(['$stateProvider', function ($stateProvider) {
 
    $stateProvider
       .state('pocs', {
@@ -44,6 +43,12 @@ zidecoPocStates.config(['$stateProvider', function ($stateProvider) {
        url: '/loading',
        templateUrl: 'pocs/poc-loading.html',
        controller: 'pocLoadingCtrl'
+     })
+
+     .state('pocs.autofocus', {
+       url: '/autofocus',
+       templateUrl: 'pocs/poc-autofocus.html',
+       controller: 'pocAutoFocusCtrl'
      })
    ;
 
