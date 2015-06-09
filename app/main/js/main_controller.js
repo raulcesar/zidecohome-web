@@ -14,10 +14,8 @@ angular.module('zideco.maincontrollers', [
     'ZModuleservice',
     function($scope, $state, ZModuleservice) {
 
-        console.log('charging up main controller');
 
         $scope.isnavbarhidden = true;
-
         $scope.getLinkUrl = function() {
              return $state.href($scope.currentModule.state);
         };

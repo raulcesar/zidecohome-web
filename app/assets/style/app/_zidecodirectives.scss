@@ -1,3 +1,39 @@
+// ACTION BAR
+.zideco-actionbar {
+    background-color: #FFFFFF;
+    //border: 1px
+    // padding: 5px;
+}
+
+.zideco-actionbar .btn {
+    background-color: #FBF9F9;
+    border-width: 1px;
+    border-color: #DDDDDD;
+    color: #428BCA;
+}
+
+.zideco-actionbar .btn:disabled {
+    opacity: 0.3;
+    background-color: #FFFFFF;
+}
+
+.zideco-actionbar h3.titulo {
+    // background-color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline;
+    padding-left: 20px;
+    // background-color: #FBF9F9;
+    border-width: 1px;
+    border-color: #DDDDDD;
+}
+
+// .zideco-actionbar.menu-destaque {
+//     background-color: #F5F5F5;
+//     width: 100%;
+// }
+
+
 // LOADING DIRECTIVE
 .black_overlay {
     display: block;

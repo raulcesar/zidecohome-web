@@ -1,8 +1,65 @@
-<h1>{{dayBeingShown | momentstandarddate}}</h1>
-
-<div ui-view></div>
-
-<h1>Bar with entry names and + icon</h1>
-
-<h1>Filter for events, entries and periods</h1>
-<div angular-grid="gridOptions" class="ag-fresh"></div>
+<div class="container">
+    <h1>{{dayBeingShown | momentstandarddate}}</h1>
+    <!-- Time ENTRIES -->
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <form name="frmTimeEntryInput" class="inline-form">
+                <div class="col-xs-3 subgrid-divider">
+                    <input class="form-control"
+                           type="text" 
+                           name="idActiveTimeEntry" 
+                           id="idActiveTimeEntry"
+                           ng-change="timeEntryDirty()" 
+                           auto-focus="focusOnTimeEntryInput" 
+                           ng-model="curentTimeEntryInput.unformatedValue" 
+                           ui-mask="99:99"</div>
+                    
+                    <!-- <input fs-input 
+                         as="fs-time" fs-focus-when="focusOnTimeEntryInput" 
+                         name="idTimeEntryInput" 
+                         ng-model="curentTimeEntryInput.value" 
+                         ng-change="timeEntryDirty()"/> -->
+                     
+                </div>
+                <div class="col-xs-9 subgrid-divider">
+                    <span zideco-action-bar bar-options="timeEntryBarOptions" new-item="newTimeEntry()" delete-active="deleteTimeEntry()" save-active="saveTimeEntry()" title="'Time Entries'">
+                </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div angular-grid="timeEntryGridOptions" class="ag-fresh"></div>
+        </div>
+    </div>
+    <hr>
+    <!-- Time PERIODS -->
+    <div class="row">
+        <div class="col-xs-6">
+            <form name="frmTimePeriodInput">
+                <div class="col-xs-6 subgrid-divider">
+                    <div class="col-xs-5 subgrid-divider">
+                        <div fs-time name="idTimePeriodStartInput" ng-model="curentTimePeriodInput.startValue" ng-change="timePeriodDirty()"></div>
+                    </div>
+                    <span class="col-xs-1 subgrid-divider control-label text-center">to</span>
+                    <div class="col-xs-5 subgrid-divider">
+                        <div fs-time name="idTimePeriodEndInput" ng-model="curentTimePeriodInput.endValue" label="Date" ng-change="timePeriodDirty()"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 subgrid-divider">
+                    <span zideco-action-bar bar-options="timePeriodBarOptions" new-item="newTimePeriod()" delete-active="deleteTimePeriod()" title="'Time Periods'">
+                </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div angular-grid="timePeriodGridOptions" class="ag-fresh"></div>
+        </div>
+    </div>
+    <!-- Day Events -->
+</div>

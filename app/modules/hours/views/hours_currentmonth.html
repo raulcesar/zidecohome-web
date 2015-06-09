@@ -1,6 +1,8 @@
 <!-- summary bar -->
 <div class="col-xs-12">
-    <h1>{{monthSummary.totalValidMinutes | minutos}}</h1>
+    <h3>Current hours: {{monthSummary.totalValidMinutes | minutes}}</h3>
+    <h3>Total Hours Needed so Far: ???</h3>
+    <h3>Total Hours Month: ???</h3>
     
     <form class="form-inline ">
         <div class="col-xs-12 verticle-padded">
@@ -11,7 +13,6 @@
     </form>
     
         <div class="col-xs-12">
-            <button ng-click="testio()" class="btn btn-danger">The socket-io test button!</button>
             <button ng-click="sendScrapeTimeEntriesServiceRequestCurrentMonth()" class="btn ">Scrape Period</button>
             <button ng-click="sendEntryProcessServiceRequestCurrentMonth()" class="btn ">Reprocess Entries For Month</button>
             <button ng-click="sendScrapeAndProcessServiceRequestForPeriod()" class="btn ">Scrape and Reprocess Period</button>

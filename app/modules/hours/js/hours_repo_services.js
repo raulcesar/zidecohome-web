@@ -60,11 +60,38 @@ angular.module('zideco.hours.reposervices', ['restangular'])
             throw new Error('Need object to save.');
         }
 
+        //Dates are a pain in the ass! Because of this, we will convert them to 
+        //a YYYMMDDHH:mm format to serialize.
+        var dateMoment = moment(timeEntry.entryTime);
+        timeEntry.entryTime = dateMoment.format('YYYYMMDDHH:mm');
+
         if (Restangular.configuration.isRestangularized(timeEntry)) {
             return timeEntry.save();
         }
 
         return Restangular.all(timeEntryResource).post(timeEntry);
+    };
+
+
+        // var excluiPessoa = function(idPessoa) {
+        //     if (_.isUndefined(idPessoa)) {
+        //         return resolveErroComPromessa('idPessoa obrigatorio ao executar excluiPessoa');
+        //     }
+        //     return Restangular.one(resourcePessoaCompleta, idPessoa).remove();
+        // };
+
+    var deleteTimeEntry = function(idTimeEntry) {
+        if (_.isUndefined(idTimeEntry)) {
+            throw new Error('Need ID to delete.');
+        }
+        return Restangular.one(timeEntryResource, idTimeEntry).remove();
+    };
+
+    var deleteTimePeriod = function(idTimePeriod) {
+        if (_.isUndefined(idTimePeriod)) {
+            throw new Error('Need ID to delete.');
+        }
+        return Restangular.one(timePeriodResource, idTimePeriod).remove();
     };
 
     var getTimePeriods = function(filter) {
@@ -93,7 +120,9 @@ angular.module('zideco.hours.reposervices', ['restangular'])
         getTimePeriods: getTimePeriods,
         saveTimePeriods: saveTimePeriods,
         getTimeEntry: getTimeEntry,
-        getLastScrapedDate: getLastScrapedDate
+        getLastScrapedDate: getLastScrapedDate,
+        deleteTimeEntry:deleteTimeEntry,
+        deleteTimePeriod: deleteTimePeriod
 
     };
 

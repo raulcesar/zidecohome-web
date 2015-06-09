@@ -158,7 +158,7 @@ angular.module('zideco.services', [
             //Put user into localstorage so we can use it in interceptor, event after a redirect.
             localStorageService.remove('lasturl');
             localStorageService.set('lasturl', _lasturl);
-            console.log('Successfully set lastUrl to: ' + lastUrl.state);
+            // console.log('Successfully set lastUrl to: ' + lastUrl.state);
         };
 
         var getLastUrl = function() {
@@ -328,25 +328,24 @@ angular.module('zideco.services', [
         evtDone: 'evtDone',
         evtShow: 'evtShow',
     };
+    var contextLogs = {};
 
     var hide = function(context) {
-        console.log('calling HIDE with context: ' + context);
         if (--showCounters <= 0) {
             if (showCounters < 0) {
-                console.log('Warning... showcounter is below zero... this should never happen: ' + showCounters);
+                console.log('Warning... showcounter is below zero... this should never happen. context: ' + context + ' showCounters: ' + showCounters + '\ncontextLogs:\n' + JSON.stringify(contextLogs));
             }
             showCounters = 0;
             
-            console.log('showCounters at zero or below. Going to broadcast evtDone.');
             $rootScope.$broadcast(lodingEvents.evtDone);
         }
 
     };
 
     var show = function(context) {
-        console.log('calling SHOW with context: ' + context);
+        contextLogs[context] = {before: showCounters, after: showCounters + 1};
         showCounters++;
-        console.log('Going to broadcast ' + lodingEvents.evtShow);
+        // console.log('Going to broadcast ' + lodingEvents.evtShow);
         $rootScope.$broadcast(lodingEvents.evtShow);
     };
 
@@ -412,14 +411,14 @@ angular.module('zideco.services', [
         checkAllPhasesComplete: function() {
             var self = this;
             for (var key in self.phases) {
-                console.log('checking phase: ' + key);
+                // console.log('checking phase: ' + key);
                 // check also if property is not inherited from prototype
                 if (self.phases.hasOwnProperty(key)) {
                     var value = self.phases[key];
                     if (value === false) {
                         return false;
                     }
-                    console.log('Phase ' + key + ' finished');
+                    // console.log('Phase ' + key + ' finished');
                 }
             }
 

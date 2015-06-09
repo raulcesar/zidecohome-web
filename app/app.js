@@ -61,7 +61,7 @@ angular.module('zideco', [
         $rootScope.$on(zidecoEvents.zevtAuthLoginatChanged, function(ev, data) {
             //For the loginatChanged event to fire, it means there was an unathourized use attempt.
             //Set logintURL and change state to landing page.
-            console.log('in rootscope AuthLoginAtChanged... data: ' + data);
+            // console.log('in rootscope AuthLoginAtChanged... data: ' + data);
             //At this point, we should set the last attempted url.
             // LASTURL.setLoginError();
             Auth.setLoginAtURL(data);
@@ -71,25 +71,25 @@ angular.module('zideco', [
 
         //Here we store the "last" state. No interceptor, eu incluo informacao de erro (caso aja)
         //Então, abaixo, posso verificar esta informação e se houver, eu sei que devo redirecionar para o "ultimo" após o erro.
-        $rootScope.$on('$stateChangeStart',
-            //Full signature: event, toState, toParams, fromState, fromParams
-            function(event, toState) {
-                console.log('in $stateChangeStart. toState: ' + toState.name);
+        // $rootScope.$on('$stateChangeStart',
+        //     //Full signature: event, toState, toParams, fromState, fromParams
+        //     function(event, toState) {
+        //         // console.log('in $stateChangeStart. toState: ' + toState.name);
 
-                // var lastUrl = LASTURL.getLastUrl();
-                // if (lastUrl && lastUrl.err && lastUrl.state) {
-                //     LASTURL.clearLastUrl();
-                //     //Redirect to lasturl.
-                //     event.preventDefault();
-                //     $state.transitionTo(lastUrl.state);
-                // }
+        //         // var lastUrl = LASTURL.getLastUrl();
+        //         // if (lastUrl && lastUrl.err && lastUrl.state) {
+        //         //     LASTURL.clearLastUrl();
+        //         //     //Redirect to lasturl.
+        //         //     event.preventDefault();
+        //         //     $state.transitionTo(lastUrl.state);
+        //         // }
 
-            });
+        //     });
 
         $rootScope.$on('$stateChangeSuccess',
             //Full signature: event, toState, toParams, fromState, fromParams
             function(event, toState) {
-                console.log('in $stateChangeSuccess. toState: ' + toState.name);
+                // console.log('in $stateChangeSuccess. toState: ' + toState.name);
                 ZModuleservice.setCurrentModule(toState.name);
                 // var lastUrl = LASTURL.getLastUrl();
                 //If the lastUrl has an "error" property, than we should not reset it.
