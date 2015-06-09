@@ -185,13 +185,13 @@ angular.module('zideco.hours.daydetailcontrollers', [
             $scope.frmTimeEntryInput.$setUntouched();
             $scope.timeEntryBarOptions.allowSave = false;
             $scope.timeEntryBarOptions.allowDelete = false;
-            $scope.focusOnTimeEntryInput = true ;
+            $scope.focusOnTimeEntryInput = true;
         };
-        
+
         $scope.saveTimeEntry = function() {
             var datePart = $scope.dayBeingShown.format('DDMMYYYY');
             var newTime = moment(datePart + $scope.curentTimeEntryInput.unformatedValue, 'DDMMYYYYHHmm');
-           
+
             var timeEntry = {
                 id: $scope.curentTimeEntryInput.id,
                 entryTime: newTime.toDate(),
@@ -200,7 +200,7 @@ angular.module('zideco.hours.daydetailcontrollers', [
             };
 
             hoursResourceService.saveTimeEntry(timeEntry).then(function(data) {
-                console.log('Saved timeEntry: ' +data);
+                console.log('Saved timeEntry: ' + data);
                 $scope.refreshDayList();
             });
         };
@@ -354,27 +354,50 @@ angular.module('zideco.hours.daydetailcontrollers', [
 
                     timePeriodRows = _.sortBy(
                         _.map(data, function(timePeriod) {
+                            var ret = {};
                             // var value;
                             // var dayRef = moment(timePeriod.dayReference);
                             var start = moment(timePeriod.startTime);
-                            var end = moment(timePeriod.endTime);
+                            var end = timePeriod.endTime ? moment(timePeriod.endTime) : undefined;
                             var format = 'HH:mm';
-                            if (start.date() !== end.date()) {
-                                format = 'DD/MM/YYYY HH:mm';
-                            }
 
-                            var ret = {};
                             ret.type = 'timeperiod';
                             ret.id = timePeriod.id;
                             ret.columnTitle = 'Time Period';
                             ret.startMoment = start;
-                            ret.startValue = start.format(format);
-                            ret.endValue = end.format(format);
 
+
+                            if (!timePeriod.endTime) {
+                                if (moment(timePeriod.dayReference).isSame(moment(), 'day')) {
+                                    timePeriod.endTime = moment().toDate();
+                                    timePeriod.status = 'projected';
+
+
+                                    var rawMinutes = moment(timePeriod.endTime).diff(moment(timePeriod.startTime), 'minutes');
+                                    timePeriod.rawMinutes = rawMinutes;
+                                    timePeriod.validMinutes = rawMinutes;
+                                    end = timePeriod.endTime ? moment(timePeriod.endTime) : undefined;
+                                } else {
+                                    ret.startValue = start.format(format);
+                                    ret.endValue = end.format(format);
+                                    ret.value = start.format(format) + ' - INVALID END';
+                                    ret.validMinutes = minutesFilter('0');
+                                    ret.rawMinutes = minutesFilter('0');
+                                    ret.status = timePeriod.origin + ' - INVALID';
+                                    return ret;
+                                }
+                            }
+
+                            if (end && start.date() !== end.date()) {
+                                format = 'DD/MM/YYYY HH:mm';
+                            }
+
+                            ret.startValue = start.format(format);
+                            ret.status = timePeriod.origin + ' - ' + timePeriod.status;
+                            ret.endValue = end.format(format);
                             ret.value = start.format(format) + ' - ' + end.format(format);
                             ret.validMinutes = minutesFilter(timePeriod.validMinutes.toString());
                             ret.rawMinutes = minutesFilter(timePeriod.rawMinutes.toString());
-                            ret.status = timePeriod.origin + ' - ' + timePeriod.status;
 
                             return ret;
 

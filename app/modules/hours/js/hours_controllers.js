@@ -41,8 +41,9 @@ angular.module('zideco.hourscontrollers', [
     'monthSummaryHelpers',
     function($http, $scope, $compile, $timeout, $q, $modal, $state, uiCalendarConfig, commonResourceService, hoursResourceService, minutesFilter, ServiceRequestFactory, loadingservice, Auth, CommonDialogsService, MessageIoSocket, zidecoUtils, monthSummaryHelpers) {
         $scope.timePeriodEvents = [];
+        $scope.timePeriodProjectedEvents = [];
         $scope.summaryEvents = [];
-        
+
         $scope.eventSources = [{
             events: $scope.summaryEvents,
             color: '#009213',
@@ -50,6 +51,9 @@ angular.module('zideco.hourscontrollers', [
             overlap: false
         }, {
             events: $scope.timePeriodEvents
+        }, {
+            events: $scope.timePeriodProjectedEvents,
+            color: '#FF2828'
         }];
 
         var serviceIdsSent = {};
@@ -188,9 +192,6 @@ angular.module('zideco.hourscontrollers', [
             loadingservice.hide('refreshCalendar_success');
         };
 
-        //Controle all phases...
-        var phases = ['timeperiods', 'holidays'];
-        var phaseController = zidecoUtils.getPhaseController('monthSummaryPhaseController', phases, $scope.finishCalendarRefresh);
 
 
 
@@ -198,9 +199,13 @@ angular.module('zideco.hourscontrollers', [
         $scope.refreshCalendar = function() {
             //Lets get the PeriodEntries for the current user to create events.
             loadingservice.show('refreshCalendar');
+            //Controle all phases...
+            var phases = ['timeperiods', 'holidays'];
+            var phaseController = zidecoUtils.getPhaseController('monthSummaryPhaseController', phases, $scope.finishCalendarRefresh);
 
-            monthSummaryHelpers.refreshTimePeriods($scope.startDate, $scope.endDate, $scope.timePeriodEvents, $scope.summaryEvents, uiCalendarConfig, phaseController, phases[0]) ;
-            monthSummaryHelpers.refreshHolidays($scope, uiCalendarConfig, phaseController, phases[1]) ;
+
+            monthSummaryHelpers.refreshTimePeriods($scope.startDate, $scope.endDate, $scope.timePeriodEvents, $scope.timePeriodProjectedEvents, $scope.summaryEvents, uiCalendarConfig, phaseController, phases[0]);
+            monthSummaryHelpers.refreshHolidays($scope, uiCalendarConfig, phaseController, phases[1]);
 
         };
 

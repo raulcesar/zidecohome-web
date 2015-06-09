@@ -174,7 +174,7 @@ angular.module('zideco.services', [
             if (lastUrl && lastUrl.loginerror && !_stillDirtyFromError) {
                 return lastUrl;
             }
-            
+
             return undefined;
         };
 
@@ -333,18 +333,25 @@ angular.module('zideco.services', [
     var hide = function(context) {
         if (--showCounters <= 0) {
             if (showCounters < 0) {
-                console.log('Warning... showcounter is below zero... this should never happen. context: ' + context + ' showCounters: ' + showCounters + '\ncontextLogs:\n' + JSON.stringify(contextLogs));
+                console.log('Warning... Calling loadingService.hide() and showcounter is below zero... this should never happen. context: ' + context + ' showCounters: ' + showCounters + '\ncontextLogs:\n' + JSON.stringify(contextLogs));
             }
             showCounters = 0;
-            
+
             $rootScope.$broadcast(lodingEvents.evtDone);
         }
 
     };
 
     var show = function(context) {
-        contextLogs[context] = {before: showCounters, after: showCounters + 1};
+        contextLogs[context] = {
+            before: showCounters,
+            after: showCounters + 1
+        };
         showCounters++;
+        if (showCounters <= 0) {
+            console.log('Warning... Calling loadingService.show() and showcounter equal to or below zero... this should never happen. context: ' + context + ' showCounters: ' + showCounters + '\ncontextLogs:\n' + JSON.stringify(contextLogs));
+        }
+
         // console.log('Going to broadcast ' + lodingEvents.evtShow);
         $rootScope.$broadcast(lodingEvents.evtShow);
     };

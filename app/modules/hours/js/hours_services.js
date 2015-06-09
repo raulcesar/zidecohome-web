@@ -50,7 +50,7 @@ angular.module('zideco.hours.services', [
         var refreshMonthSummary = function(timePeriodEvents, summaryEvents, uiCalendarConfig, phaseController, phaseToFinish) {
             //Month summary will have 3 "times":
             //1) Total time so far (including "projected event")
-//2) 
+            //2) 
 
 
             //             //Add to month summary
@@ -68,10 +68,12 @@ angular.module('zideco.hours.services', [
 
         };
 
-        var refreshDaySummary = function(timePeriodEvents, summaryEvents, uiCalendarConfig, phaseController, phaseToFinish) {};
+        var refreshDaySummary = function(timePeriodEvents, summaryEvents, uiCalendarConfig, phaseController, phaseToFinish) {
+
+        };
 
 
-        var refreshTimePeriods = function(startMoment, endMoment, timePeriodEvents, timePeriodSummaryEvents, uiCalendarConfig, phaseController, phaseToFinish) {
+        var refreshTimePeriods = function(startMoment, endMoment, timePeriodEvents, timePeriodProjectedEvents, timePeriodSummaryEvents, uiCalendarConfig, phaseController, phaseToFinish) {
             var filter = {
                 start: startMoment.toDate(),
                 end: endMoment.toDate()
@@ -80,6 +82,8 @@ angular.module('zideco.hours.services', [
             hoursResourceService.getTimePeriods(filter).then(function(data) {
                 //Each object has a "validMinutes" that tells us how many minutes
                 timePeriodEvents.length = 0;
+                timePeriodProjectedEvents.length = 0;
+                
 
                 // var sortFunc = function(date) {
                 //     return moment(date).unix();
@@ -89,7 +93,30 @@ angular.module('zideco.hours.services', [
                 var summaries = {};
 
                 for (var i = 0; i < data.length; i++) {
+                    var eventDestination = timePeriodEvents;
                     var period = data[i];
+                    //If the period has no end date, and it is TODAY consider NOW as end time.
+                    if (!period.validMinutes) {
+                        console.log('hello');
+                        // continue;
+                    }
+                    if (!period.endTime) {
+                        if (moment(period.dayReference).isSame(moment(), 'day')) {
+                            //Se for do mesmo dia, então podemos criar um periodo "virtual"
+                            period.endTime = moment().toDate();
+                            period.status = 'projected';
+
+                            var rawMinutes = moment(period.endTime).diff(moment(period.startTime), 'minutes');
+                            period.rawMinutes = rawMinutes;
+                            period.validMinutes = rawMinutes;
+                            eventDestination = timePeriodProjectedEvents;
+                        } else {
+                            //Se não for do mesmo dia, então desconsidera o registro.
+                            continue;
+
+                        }
+                    }
+
                     //Make event for "day summary"
                     var key = moment(period.dayReference).format('DDMMYYYY');
                     var summary = summaries[key];
@@ -114,7 +141,7 @@ angular.module('zideco.hours.services', [
                             moment(period.endTime).format('DD/MM HH:mm')
                             // end: period.dayReference
                     };
-                    timePeriodEvents.push(event);
+                    eventDestination.push(event);
                 }
 
 
