@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 
-var plugins = require('gulp-load-plugins')({lazy: false});
+// var plugins = require('gulp-load-plugins')({lazy: false});
 var es = require('event-stream');
 var minifyCSS = require('gulp-minify-css');
 var htmlreplace = require('gulp-html-replace');
@@ -15,8 +15,15 @@ var stylish = require('jshint-stylish');
 var protractor = require('gulp-protractor').protractor;
 var paths = require('./paths');
 var rimraf = require('rimraf');
-
+var sass = require('gulp-sass');
+var changed = require('gulp-changed');
+var autoprefixer = require('gulp-autoprefixer');
 var logCapture = require('gulp-log-capture');
+var imagemin = require('gulp-imagemin');
+var jshint = require('gulp-jshint');
+var angularTemplatecache = require('gulp-angular-templatecache');
+var connect = require('gulp-connect');
+
 var os = require('os');
 
 function buildVersionString() {
@@ -74,10 +81,10 @@ gulp.task('VendorCSS', ['CopiaWebFonts'], function () {
     var cssFiles = gulp.src(paths.vendorcss);
 
     return es.merge(
-        sassFiles.pipe(plugins.sass()),
+        sassFiles.pipe(sass()),
         cssFiles)
-        .pipe(plugins.changed(paths.build))
-        .pipe(plugins.concat('lib.css'))
+        .pipe(changed(paths.build))
+        .pipe(concat('lib.css'))
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(paths.build));
@@ -101,11 +108,11 @@ gulp.task('AppCSS', function () {
     var sassFiles = gulp.src(paths.appsass);
     var cssFiles = gulp.src(paths.appcss);
     return es.merge(
-        sassFiles.pipe(plugins.sass()),
+        sassFiles.pipe(sass()),
         cssFiles)
-//        .pipe(plugins.changed(paths.build))
-        .pipe(plugins.concat('app.css'))
-        .pipe(plugins.autoprefixer('last 2 versions'))
+//        .pipe(changed(paths.build))
+        .pipe(concat('app.css'))
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(minifyCSS())
 
         .pipe(gulp.dest(paths.build));
@@ -119,8 +126,8 @@ gulp.task('imagemin', function () {
         imgDst = paths.build;
 
     gulp.src(imgSrc)
-        .pipe(plugins.changed(imgDst))
-        .pipe(plugins.imagemin())
+        .pipe(changed(imgDst))
+        .pipe(imagemin())
         .pipe(gulp.dest(imgDst));
 });
 
@@ -135,19 +142,19 @@ gulp.task('scripts', function () {
             .pipe(replace('<!--BuildVersion-->', versionNumber)),
         gulp.src(paths.scripts))
 
-        .pipe(plugins.jshint())
-        .pipe(plugins.jshint.reporter('default'))
-//        .pipe(plugins.stripDebug())
-//    .pipe(plugins.ngmin())
-//    .pipe(plugins.uglify({mangle: false}))
-        .pipe(plugins.concat('app.js'))
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+//        .pipe(stripDebug())
+//    .pipe(ngmin())
+//    .pipe(uglify({mangle: false}))
+        .pipe(concat('app.js'))
         .pipe(gulp.dest(paths.build));
 });
 
 //combine all template files of the app into a js file and put into cache.
 gulp.task('templates', function () {
     gulp.src(paths.templates)
-        .pipe(plugins.angularTemplatecache('templates.js', {standalone: true}))
+        .pipe(angularTemplatecache('templates.js', {standalone: true}))
         .pipe(gulp.dest(paths.build));
 });
 
@@ -156,7 +163,7 @@ gulp.task('templates', function () {
 gulp.task('vendorJS', function () {
     //concatenate vendor JS files
     gulp.src(paths.vendorJS)
-        .pipe(plugins.concat('lib.js'))
+        .pipe(concat('lib.js'))
         .pipe(gulp.dest(paths.build));
 });
 
@@ -197,7 +204,7 @@ gulp.task('watch', function () {
         'build/**/*.css'
     ], function (event) {
         return gulp.src(event.path)
-            .pipe(plugins.connect.reload());
+            .pipe(connect.reload());
     });
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.templates, ['templates']);
@@ -218,7 +225,7 @@ gulp.task('copyImagesNoMin', function () {
 
 gulp.task('debugsass', function() {
     var sassFiles = gulp.src('./app/assets/style/**/*.scss');
-    sassFiles.pipe(plugins.sass({errLogToConsole: true}))
+    sassFiles.pipe(sass({errLogToConsole: true}))
         .pipe(gulp.dest(paths.build));
 });
 
@@ -236,7 +243,7 @@ gulp.task('watchSTYLE', function () {
     gulp.watch(paths.appsass, ['AppCSS']);
     gulp.watch(paths.vendorcss, ['VendorCSS']);
     gulp.watch(paths.vendorsass, ['VendorCSS']);
-    gulp.watch(paths.images, ['ProcessaStilosParaDesenvolvimento']);
+    // gulp.watch(paths.images, ['ProcessaStilosParaDesenvolvimento']);
 });
 
 gulp.task('watchMock', function () {
@@ -307,13 +314,13 @@ gulp.task('lint-dev', function () {
 });
 
 
-gulp.task('connect', plugins.connect.server({
+gulp.task('connect', connect.server({
     root: ['build'],
     port: 9092,
     livereload: true
 }));
 
-gulp.task('connect-dev', plugins.connect.server({
+gulp.task('connect-dev', connect.server({
     root: ['.', 'app'],
     port: 9092,
     livereload: true
